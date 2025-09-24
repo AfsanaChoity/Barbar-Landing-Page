@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './assets/logo.svg';
 import vector8 from './assets/svg/Vector8.svg'
 import vector9 from './assets/svg/Vector9.svg'
@@ -13,9 +13,13 @@ import MeetAskRey from './components/MeetAskRey';
 import SmarterQueues from './components/SmarterQueues';
 import AboutClients from './components/AboutClients';
 import Footer from './components/Footer';
+import LogoVideoModal from './components/Modal';
 
 
 export default function App() {
+  const [open, setOpen] = useState(true);
+
+
   return (
     <div className=''>
 
@@ -35,7 +39,12 @@ export default function App() {
           <div className='flex items-center justify-between p-4 gap-2 '>
             {/* logo */}
             <div className='z-20'>
-              <img src={logo} alt="logo" className='h-[209px] w-[96px]' />
+              <button
+                onClick={() => setOpen(true)}
+                className='cursor-pointer'
+              >
+                <img src={logo} alt="logo" className='h-[209px] w-[96px]' />
+              </button>
             </div>
 
             {/* content */}
@@ -64,6 +73,7 @@ export default function App() {
 
             </div>
           </div>
+
         </nav>
 
         {/* Content+ image */}
@@ -167,7 +177,7 @@ export default function App() {
 
       {/* 3 phones section */}
 
-      <section  className='mt-120'>
+      <section className='mt-120'>
         <Phones3 />
       </section>
 
@@ -186,17 +196,25 @@ export default function App() {
         <SmarterQueues />
       </section>
 
-    {/* About Clients Section */}
-    <section className='container mx-auto mt-20'>
-      <AboutClients />
+      {/* About Clients Section */}
+      <section className='container mx-auto mt-20'>
+        <AboutClients />
 
-    </section>
+      </section>
 
-    {/* footer */}
-    <section className='mt-60'>
-      {/* <Footer /> */}
-    </section>
+      <LogoVideoModal />
 
+      {/* footer */}
+      <section className='mt-60'>
+        <Footer />
+      </section>
+
+      {/* render the controlled modal once, near root */}
+      <LogoVideoModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+
+      />
     </div>
   );
 }
