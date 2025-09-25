@@ -89,7 +89,7 @@ export default function BuiltByBarber() {
         /* When section is visible: play entrance (back first), then long idle breathing */
         .in-view .phone-back {
           animation:
-            enterFromTop 2600ms cubic-bezier(.2,.9,.25,1) 0ms both,
+            enterFromTop 3000ms cubic-bezier(.2,.9,.25,1) 0ms both,
             slowBreathBack 10s ease-in-out 2600ms infinite;
           box-shadow: 0 22px 48px rgba(12,12,12,0.18);
           transform-origin: center;
@@ -97,7 +97,7 @@ export default function BuiltByBarber() {
 
         .in-view .phone-front {
           animation:
-            enterFromBottom 2600ms cubic-bezier(.25,.95,.22,1) 1200ms both,
+            enterFromBottom 2600ms cubic-bezier(.25,.95,.22,1) 500ms both,
             slowBreathFront 9.5s ease-in-out 3000ms infinite;
           box-shadow: 0 28px 56px rgba(12,12,12,0.20);
           transform-origin: center;
