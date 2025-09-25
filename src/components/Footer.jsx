@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from '../assets/logo.svg';
 import apple from '../assets/svg/blackApple.svg'
 import playStore from '../assets/svg/playstore.svg'
+import LogoVideoModal from "./Modal";
 
 export default function Footer() {
+  const [open , setOpen] = useState (false);
+
   return (
     <footer
       className="w-full bg-[#F8C0A3] py-20"
@@ -14,11 +17,15 @@ export default function Footer() {
         <div className=" col-span-1 ">
           {/* logo must be provided via prop */}
           <div className="items-start">
-            <img
+            <button
+            onClick={() => setOpen(true)}
+            className="cursor-pointer">
+              <img
               src={logo}
               alt="logo"
               className="w-[186px] h-[412px] object-contain"
             />
+            </button>
           </div>
 
           
@@ -124,6 +131,11 @@ export default function Footer() {
       <div className="mt-10 text-center text-[#5C5C5C] poppins-regular text-[16px]">
         © 2025 Barbers Time. All rights reserved.
       </div>
+
+      <LogoVideoModal 
+      isOpen={open}
+      onClose={()=>setOpen(false)}
+      />
     </footer>
   );
 }

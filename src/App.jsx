@@ -14,6 +14,9 @@ import SmarterQueues from './components/SmarterQueues';
 import AboutClients from './components/AboutClients';
 import Footer from './components/Footer';
 import LogoVideoModal from './components/Modal';
+import MeetFounders from './components/MeetFounders';
+import MapView from './components/MapView';
+import BuiltByBarber from './components/BuiltByBarber';
 
 
 export default function App() {
@@ -177,17 +180,20 @@ export default function App() {
 
       {/* 3 phones section */}
 
-      <section className='mt-120'>
+      <section className='mt-14 0'>
         <Phones3 />
       </section>
 
-      {/* Map Section */}
-      <section>
+      {/* Map View Section */}
+      <section className='container mx-auto mt-80'>
 
+        <MapView />
       </section>
 
+      
+
       {/* Meet Section */}
-      <section className='container mx-auto mt-80'>
+      <section className='container mx-auto mt-40'>
         <MeetAskRey />
       </section>
 
@@ -196,16 +202,25 @@ export default function App() {
         <SmarterQueues />
       </section>
 
+      {/* Build By Barber */}
+      <section className='container mx-auto mt-20'>
+        <BuiltByBarber />
+      </section>
+
       {/* About Clients Section */}
       <section className='container mx-auto mt-20'>
         <AboutClients />
 
       </section>
 
-      <LogoVideoModal />
+      {/* Meet Founders Section */}
+      <section className='mt-60'>
+        <MeetFounders />
+      </section>
+
 
       {/* footer */}
-      <section className='mt-60'>
+      <section className='mt-20'>
         <Footer />
       </section>
 

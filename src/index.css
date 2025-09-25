@@ -5,6 +5,12 @@
 
 
 /* poppins */
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 275;
+  font-style: normal;
+}
+
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
