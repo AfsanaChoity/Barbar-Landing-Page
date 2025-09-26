@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MeetFounders() {
   return (
-    <section className="container mx-auto px-6 py-12">
+    <section className="  py-12">
       {/* Title */}
       <h2 className="text-center poppins-semibold text-[64px]  mb-10">Meet the Founders</h2>
 

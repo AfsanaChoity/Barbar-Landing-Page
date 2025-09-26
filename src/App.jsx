@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logo from './assets/logo.svg';
 import vector8 from './assets/svg/Vector8.svg'
 import vector9 from './assets/svg/Vector9.svg'
@@ -17,18 +17,61 @@ import LogoVideoModal from './components/Modal';
 import MeetFounders from './components/MeetFounders';
 import MapView from './components/MapView';
 import BuiltByBarber from './components/BuiltByBarber';
+import HireBarber from './components/HireBarber';
+import BookHaircut from './components/BookHaircut';
+import EffortlessShop from './components/EffortlessShop';
+import SimplePayment from './components/SimplePayment';
+import LiveLocation from './components/LiveLocation';
+import CallChat from './components/CallChat';
+import SeeTranding from './components/SeeTranding';
+import AboutBarber from './components/AboutBarber';
+import Owner from './components/Owner';
 
 
 export default function App() {
   const [open, setOpen] = useState(true);
 
+  // for animation
+  const heroRef = useRef(null);
+  const phonesRef = useRef(null);
+
+  useEffect(() => {
+    const phonesNode = phonesRef.current;
+    if (!phonesNode) return;
+    const phones = phonesNode.querySelectorAll('img.phone');
+    if (!phones || phones.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // When hero enters view: restart animation
+            phones.forEach((p) => {
+              p.classList.remove('phone-enter');
+              // force reflow so animation can restart reliably
+              // eslint-disable-next-line no-unused-expressions
+              p.offsetWidth;
+              p.classList.add('phone-enter');
+            });
+          } else {
+            // Remove animation classes when leaving so it will replay next time
+            phones.forEach((p) => p.classList.remove('phone-enter'));
+          }
+        });
+      },
+      { threshold: 0.3 } // trigger when ~30% of hero is visible — tweak if you want
+    );
+
+    if (heroRef.current) observer.observe(heroRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className=''>
 
       {/* Hero section */}
 
-      <div className=''>
+      <div className='' ref={heroRef}>
 
         {/* bg images */}
         <div className=' w-full '>
@@ -61,17 +104,19 @@ export default function App() {
               {/* lists */}
               <div className='hidden md:block'>
                 <ul className='urbanist-semibold md:text-[20px] xl:text-[22px] flex'>
-                  <li className="mx-4">Home</li>
-                  <li className="mx-4">Services</li>
-                  <li className="mx-4">Map</li>
-                  <li className="mx-4">Features</li>
-                  <li className="mx-4">Founders</li>
+                  <a href="#"><li className="mx-4 cursor-pointer">Home</li></a>
+                  <a href="#services"><li className="mx-4 cursor-pointer">Services</li></a>
+                  <a href="#map"><li className="mx-4 cursor-pointer">Map</li></a>
+                  <a href="#features"><li className="mx-4 cursor-pointer">Features</li></a>
+                  <a href="#founders"><li className="mx-4 cursor-pointer">Founders</li></a>
+                  
+                
                 </ul>
               </div>
 
               {/* Button */}
               <div className=''>
-                <button className='urbanist-bold md:text-[20px] xl:text-[22px] border  border-black rounded-[100px] px-[38px] py-[18px]'>Stay With Us</button>
+                <a href='#stay-with-us' className='urbanist-bold md:text-[20px] xl:text-[22px] border  border-black rounded-[100px] px-[38px] py-[18px]'>Stay With Us</a>
               </div>
 
             </div>
@@ -131,66 +176,88 @@ export default function App() {
 
           </div>
 
-          {/* phones */}
-          <div className="relative z-30 w-[620px] h-[560px] mr-[6%] hidden md:block">
-            {/* RIGHT phone — front/top layer */}
-            <img
-              src={phn1}
-              alt="phone right"
-              className="absolute right-0 bottom-0 w-[260px] xl:w-[280px]
-                z-30
-                translate-x-[6px] -translate-y-[50px]"
-            />
+           {/* phones */}
+    <div className="relative z-30 w-[620px] h-[560px] mr-[6%] hidden md:block" ref={phonesRef}>
 
-            {/* CENTER phone — middle layer, slightly behind */}
-            <img
-              src={phn2}
-              alt="phone middle"
-              className="absolute left-[40%] bottom-[22px] -translate-x-1/2 translate-y-[20px]
-               w-[260px] xl:w-[280px] z-20
-               "
-            />
+      {/* Updated style: slower entrance + bigger delays */}
+      <style>{`
+        /* keyframes: drop in from below, larger overshoot, gentler settle */
+        @keyframes phoneIn {
+          0%   { transform: translateY(300px) scale(.98); opacity: 0; }
+          60%  { transform: translateY(-30px) scale(1.03); opacity: 1; }
+          80%  { transform: translateY(12px) scale(.995); }
+          100% { transform: translateY(0) scale(1); }
+        }
 
-            {/* LEFT phone — back layer, more tilt */}
-            <img
-              src={phn3}
-              alt="phone left"
-              className="absolute -left-[20%] bottom-[46px]
-               w-[260px] xl:w-[280px]  z-10 translate-y-[80px]
-               "
-            />
-          </div>
+        .phone-enter {
+          animation-name: phoneIn;
+          animation-duration: 2600ms;                       /* slower overall */
+          animation-timing-function: cubic-bezier(.22,1.1,.24,1); /* smooth bounce */
+          animation-fill-mode: both; /* keep final state */
+          will-change: transform, opacity;
+        }
 
+        /* increased sequencing delays for a clearer staggered entrance */
+        .phone-delay-0 { animation-delay: 0.5s; }    /* first to appear (phn3) */
+        .phone-delay-1 { animation-delay: 1.5s; }    /* second (phn2) */
+        .phone-delay-2 { animation-delay: 2.3s; }    /* last (phn1) */
+      `}</style>
 
+      {/* RIGHT phone — front/top layer (arrives last) */}
+      <img
+        src={phn1}
+        alt="phone right"
+        className="phone absolute right-0 bottom-0 w-[260px] xl:w-[280px]
+          z-30
+          translate-x-[6px] -translate-y-[90px]
+          phone-delay-2"
+      />
+
+      {/* CENTER phone — middle layer, slightly behind (arrives second) */}
+      <img
+        src={phn2}
+        alt="phone middle"
+        className="phone absolute left-[40%] bottom-[22px] -translate-x-1/2 -translate-y-[10px]
+          w-[260px] xl:w-[280px] z-20
+          phone-delay-1"
+      />
+
+      {/* LEFT phone — back layer, more tilt (arrives first from bottom) */}
+      <img
+        src={phn3}
+        alt="phone left"
+        className="phone absolute -left-[20%] bottom-[46px]
+          w-[260px] xl:w-[280px]  z-10 translate-y-[80px]
+          phone-delay-0"
+      />
+    </div>
 
 
 
         </div>
-
-
 
       </div>
 
 
 
       {/* core feacture setion */}
-      <section className='mt-50'>
+      <section id='features' className='mt-50'>
         <CoreFeatures />
       </section>
 
       {/* 3 phones section */}
 
-      <section className='mt-14 0'>
+      <section className='mt-140'>
         <Phones3 />
       </section>
 
       {/* Map View Section */}
-      <section className='container mx-auto mt-80'>
+      <section id='map' className='container mx-auto mt-80'>
 
         <MapView />
       </section>
 
-      
+
 
       {/* Meet Section */}
       <section className='container mx-auto mt-40'>
@@ -202,25 +269,72 @@ export default function App() {
         <SmarterQueues />
       </section>
 
-      {/* Build By Barber */}
-      <section className='container mx-auto mt-20'>
-        <BuiltByBarber />
-      </section>
-
       {/* About Clients Section */}
       <section className='container mx-auto mt-20'>
         <AboutClients />
 
       </section>
 
+      {/* About barber Section */}
+      <section className='container mx-auto mt-40'>
+        <AboutBarber />
+
+      </section>
+
+      {/* About Owner Section */}
+      <section className='container mx-auto mt-40'>
+        <Owner />
+
+      </section>
+
+      {/* Build By Barber */}
+      <section id='services' className='container mx-auto mt-20'>
+        <BuiltByBarber />
+      </section>
+
+      {/* Hire barber */}
+      <section className='container mx-auto mt-20'>
+        <HireBarber />
+      </section>
+
+      {/* Book Your haircut  */}
+      <section className='container mx-auto mt-20'>
+        <BookHaircut />
+      </section>
+
+      {/* Effortless Shop */}
+      <section className='container mx-auto mt-20'>
+        <EffortlessShop />
+      </section>
+
+      {/* Simple & transparent Payment */}
+      <section className='container mx-auto mt-20'>
+        <SimplePayment />
+      </section>
+
+      {/* Live Location */}
+      <section className='container mx-auto mt-20'>
+        <LiveLocation />
+      </section>
+
+      {/* Call Chat */}
+      <section className='container mx-auto mt-40'>
+        <CallChat />
+      </section>
+
+      {/* See what’s Trending - */}
+      <section className='container mx-auto mt-40'>
+        <SeeTranding />
+      </section>
+
       {/* Meet Founders Section */}
-      <section className='mt-60'>
+      <section id='founders' className='container mx-auto mt-20'> 
         <MeetFounders />
       </section>
 
 
       {/* footer */}
-      <section className='mt-20'>
+      <section id='stay-with-us' className='mt-20'>
         <Footer />
       </section>
 
