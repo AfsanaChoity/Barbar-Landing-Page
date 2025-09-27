@@ -53,12 +53,12 @@ export default function Phones3() {
   };
 
   const videoInnerStyles = {
-    // tweak these percentages to exactly match your svg phone screen area
-    width: "90%",  // Adjusted to fit within the screen area of the phone
-    height: "96%", // Adjusted to fit within the screen area of the phone
-    objectFit: "cover",  // Ensures the video covers the area without distorting
-    borderRadius: "38px", // To match the phone's rounded corners
-    // marginTop: "2%", // Position video nicely within the frame
+    
+    width: "90%",  
+    height: "96%", 
+    objectFit: "cover",  
+    // borderRadius: "38px",
+   
   };
 
   return (
@@ -73,13 +73,13 @@ export default function Phones3() {
         <div className="relative  flex justify-center items-end">
           {/* left phone (behind) */}
           <div
-            className="relative z-10 transform 2xl:-translate-x-50 top-30"
+            className="relative z-10 transform lg:translate-x-10 xl:translate-x-0 2xl:-translate-x-50 -top-34 md:top-30 "
             style={phoneStyle}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center h-[164px] w-[85px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full ">
               <video
                 ref={refs[0]}
-                className="pointer-events-auto"
+                className="pointer-events-auto rounded-[8px] md:rounded-[38px] ml-4 md:ml-0"
                 style={videoInnerStyles}
                 muted
                 playsInline
@@ -96,16 +96,16 @@ export default function Phones3() {
             <img
               src={phoneFrame}
               alt="phone left"
-              className="relative w-full h-auto pointer-events-auto -z-10"
+              className="relative h-[164px] w-[100px] md:w-[300px] md:h-[600px] xl:w-full xl:h-auto pointer-events-auto -z-10"
             />
           </div>
 
           {/* center phone (front, larger visually but same actual size) */}
-          <div className="relative z-30 mx-6 top-20" style={mid_phoneStyle}>
-            <div className="absolute inset-0 flex items-center justify-center w-[200px]">
+          <div className="relative z-30 xl:mx-16 -top-24  md:top-20 lg:translate-x-12 xl:translate-x-0" style={mid_phoneStyle}>
+            <div className="absolute inset-0 flex items-center justify-center  h-[200px] w-[100px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full">
               <video
                 ref={refs[1]}
-                className="pointer-events-auto "
+                className="pointer-events-auto rounded-[8px] md:rounded-[38px] ml-4.5 md:ml-0 "
                 style={videoInnerStyles}
                 muted
                 playsInline
@@ -121,19 +121,19 @@ export default function Phones3() {
             <img
               src={phoneFrame}
               alt="phone center"
-              className="relative w-full h-auto pointer-events-auto -z-10"
+              className="relative h-[200px] w-[120px]  md:w-[300px] md:h-[600px] xl:w-full xl:h-auto pointer-events-auto -z-10"
             />
           </div>
 
           {/* right phone (behind) */}
           <div
-            className="relative z-20 transform 2xl:translate-x-50 top-30"
+            className="relative z-20 transform 2xl:translate-x-50 -top-34 md:top-30 "
             style={phoneStyle}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0  flex items-center justify-center h-[164px] w-[85px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full ">
               <video
                 ref={refs[2]}
-                className="pointer-events-auto"
+                className="pointer-events-auto rounded-[8px] md:rounded-[38px] ml-4 md:ml-0"
                 style={videoInnerStyles}
                 muted
                 playsInline
@@ -149,7 +149,7 @@ export default function Phones3() {
             <img
               src={phoneFrame}
               alt="phone right"
-              className="relative w-full h-auto pointer-events-auto -z-10"
+              className="relative h-[164px] w-[100px] md:w-[300px] md:h-[600px] xl:w-full xl:h-auto pointer-events-auto -z-10"
             />
           </div>
         </div>

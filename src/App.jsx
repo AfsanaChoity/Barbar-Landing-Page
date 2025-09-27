@@ -315,41 +315,41 @@ export default function App() {
       </section>
 
       {/* 3 phones section */}
-      <section className=' mt-40 lg:mt-140'>
+      <section className=' mt-20 lg:mt-120 '>
         <Phones3 />
       </section>
 
       {/* Map View Section */}
-      {/* <section id='map' className='container mx-auto mt-80 scroll-mt-40'>
+      <section id='map' className='container mx-auto mt-30 md:mt-40 xl:mt-80 scroll-mt-40'>
           <MapView />
-      </section> */}
+      </section>
 
 
 
       {/* Meet Section */}
-      {/* <section className='container mx-auto mt-20'>
+      <section className='container mx-auto mt-16 lg:mt-30 px-4 xl:px-0'>
         <MeetAskRey />
-      </section> */}
+      </section>
 
       {/* Smarter Queues Section */}
-      {/* <section className='container mx-auto mt-20'>
+      <section className='container mx-auto mt-16 lg:mt-30 px-4 xl:px-0'>
         <SmarterQueues />
-      </section> */}
+      </section>
 
       {/* About Clients Section */}
-      {/* <section className='container mx-auto mt-20'>
+      <section className='container mx-auto md:mt-50 px-4 xl:px-0'>
         <AboutClients />
-      </section> */}
+      </section>
 
       {/* About barber Section */}
-      {/* <section className='container mx-auto mt-40'>
+      <section className='container mx-auto mt-10 md:mt-50 px-4 xl:px-0'>
         <AboutBarber />
-      </section> */}
+      </section>
 
       {/* About Owner Section */}
-      {/* <section className='container mx-auto mt-40'>
+      <section className='container mx-auto mt-10 md:mt-50 px-4 xl:px-0'>
         <Owner />
-      </section> */}
+      </section>
 
       {/* Build By Barber */}
       {/* <section id='services' className='container mx-auto mt-20'>
