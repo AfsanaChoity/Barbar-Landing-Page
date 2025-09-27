@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import videoSrc from "../assets/vedio/Logo_design_WithMusic.mp4";
 import welcome from "../assets/gif/welcome1.gif"
 
-export default function LogoVideoModal({
+export default function LogoVideoModal2({
     isOpen = false,
     onClose = () => { },
 }) {
@@ -102,6 +102,7 @@ export default function LogoVideoModal({
 
                                         src={videoSrc}
                                         className="w-[300px] h-[300px] object-cover mx-auto"
+                                        muted
                                         autoPlay
                                         loop
                                         playsInline

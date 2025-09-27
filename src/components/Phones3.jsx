@@ -69,11 +69,11 @@ export default function Phones3() {
       </div>
 
       {/* phones wrapper (shown on md and up like your earlier layout) */}
-      <div className="hidden md:flex items-end justify-center w-full absolute inset-0 pointer-events-none ">
+      <div className="md:flex items-end justify-center w-full absolute inset-0 pointer-events-none ">
         <div className="relative  flex justify-center items-end">
           {/* left phone (behind) */}
           <div
-            className="relative z-10 transform -translate-x-50 top-30"
+            className="relative z-10 transform 2xl:-translate-x-50 top-30"
             style={phoneStyle}
           >
             <div className="absolute inset-0 flex items-center justify-center">
@@ -102,10 +102,10 @@ export default function Phones3() {
 
           {/* center phone (front, larger visually but same actual size) */}
           <div className="relative z-30 mx-6 top-20" style={mid_phoneStyle}>
-            <div className="absolute inset-0 flex items-center justify-center ">
+            <div className="absolute inset-0 flex items-center justify-center w-[200px]">
               <video
                 ref={refs[1]}
-                className="pointer-events-auto"
+                className="pointer-events-auto "
                 style={videoInnerStyles}
                 muted
                 playsInline
@@ -127,7 +127,7 @@ export default function Phones3() {
 
           {/* right phone (behind) */}
           <div
-            className="relative z-20 transform translate-x-50 top-30"
+            className="relative z-20 transform 2xl:translate-x-50 top-30"
             style={phoneStyle}
           >
             <div className="absolute inset-0 flex items-center justify-center">
