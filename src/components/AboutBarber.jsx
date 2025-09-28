@@ -43,7 +43,7 @@ export default function AboutBarber() {
                 {/* Image Section */}
                 <div className="">
                     {/* Background Div */}
-                    <div className=" bg-[#E9874E]  h-[180px] md:w-[617px] md:h-[386px] mt-10 md:mt-0">
+                    <div className=" bg-[#E9874E] rounded-[20px] h-[180px] md:w-[617px] md:h-[386px] mt-10 md:mt-0">
 
                         {/* Image Above the Background Div */}
                         <div className=" z-20 ml-10  transform -translate-y-16 md:-translate-y-16">
@@ -80,10 +80,11 @@ export default function AboutBarber() {
                 {/* Text Section */}
                 <div className=" text-center ">
                     <h2 className="text-2xl md:text-[44px] xl:text-[64px] poppins-bold mb-8">ABOUT BARBER</h2>
-                    <p className="poppins-light text-xl md:text-3xl xl:text-[38px] my-4">Get found where clients search - Google, Instagram</p>
+                    {/* <p className="poppins-light text-xl md:text-3xl xl:text-[38px] my-4">Get found where clients search - Google, Instagram</p> */}
+                    <p className="poppins-light text-xl md:text-3xl xl:text-[38px] my-4">Find out what the barbers can do in the app</p>
                     <div className="flex justify-center mt-6">
                         <button onClick={handleGetFoundClick} className="cursor-pointer flex items-center  gap-2 border poppins-regular md:text-[20px]  py-[14px] px-[26px] rounded-lg">
-                            Get found <img src={arrow} alt="" className="w-8 md:w-10" />
+                            More Info  <img src={arrow} alt="" className="w-8 md:w-10" />
                         </button>
                     </div>
                 </div>

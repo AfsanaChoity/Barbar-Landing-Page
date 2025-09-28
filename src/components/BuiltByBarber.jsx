@@ -29,7 +29,7 @@ export default function BuiltByBarber() {
   }, []);
 
   return (
-    <section ref={sectionRef} className=" container mx-auto  py-16">
+    <section ref={sectionRef} className="  py-16">
       <style>{`
         .phone-size { width: 180px; height: auto; display: block; }
 
@@ -139,17 +139,18 @@ export default function BuiltByBarber() {
       {/* top */}
       <div className="flex items-baseline mb-10 justify-center">
             <img src={barber} alt="barber icon" className="w-[160px] h-[182px]" />
-            <h4 className="poppins-semibold xl:text-[55px]">Services</h4>
+            <h4 className="poppins-semibold text-2xl md:text-3xl xl:text-[55px]">Services</h4>
           </div>
 
 
-      <div className="flex gap-100 items-center">
+      <div className=" flex flex-col-reverse md:flex-row md:justify-between md:items-center ">
+        
         {/* Left: phones */}
         <div className="relative flex  justify-center md:justify-start items-center" style={{ minHeight: 320 }}>
-          <div className="absolute -left-6 top-8 w-[322px] h-[214px] rounded-tl-[132px] rounded-bl-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
+          <div className="absolute top-40 md:-left-6 md:top-8 w-[280px] h-[200px] md:w-[322px] md:h-[214px] rounded-tl-[132px] rounded-bl-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
 
           {/* FRONT phone (comes from bottom) */}
-          <div className="relative z-10" style={{ width: 114, marginLeft: 18, top: -44 }}>
+          <div className="relative z-10 -ml-28 md:ml-[18px] top-14 md:-top-[44px] w-[114px]" >
             <div className="phone-front" style={{ position: "relative", borderRadius: 14 }}>
               <img src={phn2} alt="app preview phone 1" className="w-[114px] h-[242px] " />
               <div className="shine" />
@@ -158,7 +159,7 @@ export default function BuiltByBarber() {
           </div>
 
           {/* BACK phone (comes from top) */}
-          <div className="absolute z-0" style={{ right: -132, top: -14, width: 114 }}>
+          <div className="absolute z-0 right-4 md:-right-[132px] top-14 md:-top-[14px] w-[114px]" >
             <div className="phone-back" style={{ position: "relative", borderRadius: 14, transform: "scale(0.96)" }}>
               <img src={phn1} alt="app preview phone 2" className="w-[114px] h-[242px]" />
               <div className="shine" />
@@ -168,30 +169,30 @@ export default function BuiltByBarber() {
         </div>
 
         {/* Right: content */}
-        <div className="w-[60%] ">
+        <div className="w-[100%]  md:w-[60%] ">
           
 
-          <h2 className="reveal poppins-semibold md:text-[96px] leading-tight  mb-4" style={{ animationDelay: "0.05s" }}>
+          <h2 className="reveal poppins-semibold text-3xl lg:text-[56px] 2xl:text-[96px] leading-tight  mb-4" style={{ animationDelay: "0.05s" }}>
             Built by a <span className="text-[#A63F0B]">Barber</span>,  for everyone
           </h2>
 
-          <p className="reveal poppins-light text-[24px] mb-6 leading-13" style={{ animationDelay: "0.12s" }}>
+          <p className="reveal poppins-light text-sm leading-6 md:text-[24px] mb-6  md:leading-13" style={{ animationDelay: "0.12s" }}>
             Save time with <span className="poppins-semibold">accurate wait</span> times and <span className="poppins-semibold">instant booking</span>. Feel confident by <span className="poppins-semibold">browsing real work, profiles, </span> and <span className="poppins-semibold">ratings</span>. Keep things running smoothly with <span className="poppins-semibold">live queue</span> visibility that helps shops flow better.
           </p>
 
           <div className="reveal mb-8" style={{ animationDelay: "0.18s" }}>
             <div className="inline-block w-full  rounded-[20px] border border-[#6F6F6F] shadow-lg px-6 py-6 bg-white text-center">
-              <span className="poppins-semibold text-[28px]">Accurate wait <span className="poppins-light">times & </span> instant booking</span>
+              <span className="poppins-semibold md:text-[28px]">Accurate wait <span className="poppins-light">times & </span> instant booking</span>
             </div>
           </div>
 
           <div className="reveal grid grid-cols-1 md:grid-cols-2 gap-4 mt-4" style={{ animationDelay: "0.24s" }}>
             <div className="rounded-[20px] bg-white border border-[#666666] shadow-lg p-6">
-             <p className="poppins-semibold text-[28px] leading-16">Profiles, ratings, <span className="poppins-light">and</span> real work previews</p>
+             <p className="poppins-semibold md:text-[28px] md:leading-16">Profiles, ratings, <span className="poppins-light">and</span> real work previews</p>
             </div>
 
             <div className="rounded-[20px] bg-white border border-[#666666] shadow-lg p-6">
-              <p className="poppins-light text-[28px] leading-16">
+              <p className="poppins-light md:text-[28px] md:leading-16">
                 <span className="poppins-semibold">Live queue</span> visibility for smoother shop flow
               </p>
             </div>

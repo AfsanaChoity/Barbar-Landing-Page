@@ -94,7 +94,7 @@ export default function ScrollingPhones({ items = [], text }) {
             onClick={prev}
             disabled={index === 0}
             aria-label="Previous"
-            className={`p-2 rounded-md  shadow ${index === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-100"}`}
+            className={`p-2 rounded-md   shadow ${index === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-100 cursor-pointer"}`}
           >
             <IoIosArrowBack className="text-lg" />
           </button>
@@ -102,7 +102,7 @@ export default function ScrollingPhones({ items = [], text }) {
             onClick={next}
             disabled={index >= maxIndex}
             aria-label="Next"
-            className={`p-2 rounded-md  shadow ${index >= maxIndex ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-100"}`}
+            className={`p-2 rounded-md   shadow ${index >= maxIndex ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-100 cursor-pointer"}`}
           >
             <IoIosArrowForward className="text-lg" />
           </button>

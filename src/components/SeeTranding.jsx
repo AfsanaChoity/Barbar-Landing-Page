@@ -27,7 +27,7 @@ export default function SeeTranding() {
   }, []);
 
   return (
-    <section ref={sectionRef} className=" container mx-auto  py-16">
+    <section ref={sectionRef} className="py-16">
       <style>{`
         .phone-size { width: 180px; height: auto; display: block; }
 
@@ -135,11 +135,11 @@ export default function SeeTranding() {
       `}</style>
 
 
-      <div className="flex gap-60 items-center">
+      <div className=" flex flex-col md:flex-row md:gap-20 xl:gap-[20%] md:items-center ">
         {/* Left: content */}
-        <div className="w-[80%] ">
+        <div className="w-[100%] md:w-[60%] 2xl:w-[70%] ">
           <h2
-            className="reveal poppins-semibold md:text-[96px] leading-tight  mb-4"
+            className="reveal poppins-semibold text-3xl lg:text-[56px] 2xl:text-[96px] leading-tight mb-4"
             style={{ animationDelay: "0.05s" }}
           >
             See what’s <span className="text-[#A63F0B]"> Trending</span>  - <br />
@@ -148,7 +148,7 @@ export default function SeeTranding() {
           </h2>
 
           <p
-            className="reveal poppins-light text-[24px] mb-6 leading-13"
+            className="reveal poppins-light text-sm leading-6 md:text-[24px] mb-6  md:leading-13"
             style={{ animationDelay: "0.12s" }}
           >
             From fresh fades to seasonal styles, the feed shows real cuts in <span className="poppins-semibold">real time</span> from local barbers. Get <span className="poppins-semibold"> inspired </span>, pick a look, and <span className="poppins-semibold">book</span> on the spot.
@@ -162,13 +162,13 @@ export default function SeeTranding() {
             style={{ animationDelay: "0.24s" }}
           >
             <div className="rounded-[20px] bg-white border border-[#666666] shadow-lg p-6">
-              <p className="poppins-semibold text-[28px] leading-16">
+              <p className="poppins-semibold md:text-[28px] md:leading-16">
                 Up-to-date trends <br/> <span className="poppins-light">Scroll the latest looks from your area and beyond.</span>
               </p>
             </div>
 
             <div className="rounded-[20px] bg-white border border-[#666666] shadow-lg p-6">
-              <p className="poppins-semibold text-[28px] leading-16">
+              <p className="poppins-semibold md:text-[28px] md:leading-16">
                 From feed to chair <br /> <span className="poppins-light"> Tap a post to view the barber’s profile and book instantly. </span> 
               </p>
             </div>
@@ -177,15 +177,14 @@ export default function SeeTranding() {
 
         {/* Right: phones */}
         <div
-          className="relative flex  justify-center md:justify-start items-center"
+          className="relative flex justify-center md:justify-start items-center"
           style={{ minHeight: 320 }}
         >
-          <div className="absolute -left-6 top-8 w-[322px] h-[214px] rounded-tl-[132px] rounded-tr-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
+          <div className="absolute top-40 md:-left-6 md:top-8 w-[280px] h-[200px] md:w-[322px] md:h-[214px] rounded-tl-[132px] rounded-bl-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
 
           {/* FRONT phone (comes from bottom) */}
           <div
-            className="relative z-10"
-            style={{ width: 114, marginLeft: 18, top: -44 }}
+            className="relative z-10 -ml-28 md:ml-[18px] top-14 md:-top-[44px] w-[114px]"
           >
             <div
               className="phone-front"
@@ -203,8 +202,7 @@ export default function SeeTranding() {
 
           {/* BACK phone (comes from top) */}
           <div
-            className="absolute z-0"
-            style={{ right: -132, top: -14, width: 114 }}
+             className="absolute z-0 right-4 md:-right-[132px] top-14 md:-top-[14px] w-[114px]"
           >
             <div
               className="phone-back"

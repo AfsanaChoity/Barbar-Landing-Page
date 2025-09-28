@@ -9,10 +9,10 @@ export default function Footer() {
 
   return (
     <footer
-      className="w-full bg-[#F8C0A3] py-20"
+      className="w-full bg-[#F8C0A3] py-8 md:py-20 "
 
     >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-20">
+      <div className="container mx-auto px-4 xl:px-0 grid grid-cols-1 md:grid-cols-5 md:gap-20">
         {/* LEFT COLUMN */}
         <div className=" col-span-1 ">
           {/* logo must be provided via prop */}
@@ -23,7 +23,7 @@ export default function Footer() {
               <img
               src={logo}
               alt="logo"
-              className="w-[186px] h-[412px] object-contain"
+              className="md:w-[186px] md:h-[412px] object-contain"
             />
             </button>
           </div>
@@ -34,20 +34,20 @@ export default function Footer() {
 
         {/* Middle Column */}
         <div className="col-span-2">
-          <h2 className="caladea-bold text-[36px]  text-[#030605]">
+          <h2 className="caladea-bold text-2xl md:text-[36px]  text-[#030605]">
             Ready for a smarter cut ?
           </h2>
 
           <div className="mt-6">
             <h4 className="poppins-medium text-xl uppercase">Get Early Access</h4>
-            <p className="mt-3  leading-6 poppins-light text-xl">
+            <p className="mt-3  leading-6 poppins-light md:text-xl">
               Join the community where queues move faster, matches are better, and every cut feels confident.
             </p>
           </div>
 
           <div className="mt-8">
-            <h3 className="caladea-bold text-[36px]  text-[#030605]">Contact Us</h3>
-            <ul className="mt-3  space-y-2  poppins-light text-xl">
+            <h3 className="caladea-bold text-2xl md:text-[36px]  text-[#030605]">Contact Us</h3>
+            <ul className="mt-3  space-y-2  poppins-light text-xs md:text-[14px] xl:text-xl">
               <li>
                 For Info - <a href="mailto:info@barberstime.com" className="text-[#1E94AE]">info@barberstime.com</a>
               </li>
@@ -65,16 +65,16 @@ export default function Footer() {
 
 
         {/* RIGHT COLUMN */}
-        <div className="flex flex-col  col-span-2 ">
+        <div className="flex flex-col  col-span-2 mt-6 md:mt-0">
           <div>
-            <h2 className="caladea-bold text-[36px]  text-[#030605]">Stay in the loop</h2>
-            <p className="mt-3 poppins-regular text-[22px]">
+            <h2 className="caladea-bold text-2xl md:text-[36px]  text-[#030605]">Stay in the loop</h2>
+            <p className="mt-3 poppins-regular md:text-[22px]">
               We'll email you when we launch in your area.
             </p>
 
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="mt-4 flex items-center gap-3 max-w-md"
+              className="mt-4 flex flex-col md:flex-row items-center gap-3 max-w-md"
             >
               <input
                 aria-label="Your email"
@@ -84,7 +84,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="px-4 py-3 rounded-md bg-[#A63F0B] text-white poppins-medium "
+                className="px-4 py-3 rounded-md bg-[#A63F0B] text-white poppins-medium cursor-pointer "
               >
                 Notify me
               </button>
@@ -92,33 +92,33 @@ export default function Footer() {
           </div>
 
           <div className="mt-14">
-            <h3 className="caladea-bold text-[36px]  text-[#030605]">Join the Waitlist</h3>
+            <h3 className="caladea-bold text-2xl md:text-[36px]  text-[#030605]">Join the Waitlist</h3>
             <div className="mt-4 flex flex-wrap gap-4">
               {/* App Store Button */}
               <a
                 href="#"
-                className="inline-flex items-center gap-3 border border-black rounded-md px-4 py-3"
+                className="inline-flex items-center gap-3 border border-black rounded-md px-4 py-2 md:py-2 xl:px-6 xl:py-3"
               >
                 {/* simple Apple icon */}
                <div>
-                <img src={apple} alt="" />
+                <img src={apple} alt="" className="w-6 xl:w-full" />
                </div>
-                <div className="text-left">
-                  <div className="text-xl poppins-regular">App Store</div>
+                <div className="">
+                  <div className="xl:text-xl poppins-regular">App Store</div>
                 </div>
               </a>
 
               {/* Google Play Button */}
               <a
                 href="#"
-                className="inline-flex items-center gap-3 border border-black rounded-md px-4 py-3"
+                className="inline-flex items-center gap-3 border border-black rounded-md px-2 py-2 xl:px-4 xl:py-3"
               >
                <div>
-                <img src={playStore} alt="" />
+                <img src={playStore} alt="" className="w-6 xl:w-full" />
                </div>
 
-                <div className="text-left">
-                  <div className="text-xl poppins-regular">Google Play</div>
+                <div className="">
+                  <div className="xl:text-xl poppins-regular">Google Play</div>
                 </div>
               </a>
             </div>
@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-10 text-center text-[#5C5C5C] poppins-regular text-[16px]">
+      <div className="mt-10 text-center text-[#5C5C5C] poppins-regular text-[14px] md:text-[16px] px-2 md:px-0">
         © 2025 Barbers Time. All rights reserved.
       </div>
 

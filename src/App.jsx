@@ -59,7 +59,7 @@ const mobileMenuItems = [
 
 export default function App() {
   const [open, setOpen] = useState(false);
-  const [openModal2, setOpenModal2] = useState(true);
+  const [openModal2, setOpenModal2] = useState(false);
 
   const [openDrawer, setOpenDrawer] = useState(false);
   const [current, setCurrent] = useState("home");
@@ -129,16 +129,16 @@ export default function App() {
             </div>
 
             {/* content */}
-            <div className='flex items-center justify-between w-full transform -translate-y-18 lg:-translate-y-8 z-20'> {/* Shift items up */}
+            <div className=' flex justify-between items-center w-full transform -translate-y-18 lg:-translate-y-8 z-20'> {/* Shift items up */}
 
               {/* shop name */}
-              <div className=' flex-1'>
+              <div className='flex-1 md:flex-none   '>
                 <h3 className='text-[#161A1A] text-[18px] md:text-xl xl:text-2xl urbanist-extrabold'>Barbers Time</h3>
               </div>
 
               {/* lists */}
-              <div className='hidden md:block'>
-                <ul className='urbanist-semibold md:text-[20px] xl:text-[22px] flex'>
+              <div className='hidden md:block  '>
+                <ul className='urbanist-semibold  md:text-[20px] xl:text-[22px] flex'>
                   <a href="#"><li className="mx-4 cursor-pointer">Home</li></a>
                   <a href="#services"><li className="mx-4 cursor-pointer">Services</li></a>
                   <a href="#map"><li className="mx-4 cursor-pointer">Map</li></a>
@@ -208,7 +208,7 @@ export default function App() {
                 placeholder="Enter email address"
                 className="text-sm md:text-[16px]  flex-1 px-2 py-3 lg:px-4 lg:py-3 outline-none poppins-medium text-black placeholder:text-black/80"
               />
-              <button className="bg-black text-white px-6 py-4  lg:px-10 lg:py-5 rounded-full poppins-regular text-xs md:text-[16px]">
+              <button className="cursor-pointer bg-black text-white px-6 py-4  lg:px-10 lg:py-5 rounded-full poppins-regular text-xs md:text-[16px]">
                 Notify me
               </button>
             </div>
@@ -227,8 +227,8 @@ export default function App() {
                   href="#"
                   className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg w-[211px] "
                 >
-                  <img src={apple} alt="apple" />
-                  <span className="text-[20px] poppins-regular">App Store</span>
+                  <img src={apple} alt="apple" className='w-10 md:w-14' />
+                  <span className="md:text-[20px] poppins-regular">App Store</span>
                 </a>
 
                 {/* Google Play */}
@@ -236,8 +236,8 @@ export default function App() {
                   href="#"
                   className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg w-[211px] "
                 >
-                  <img src={playstore} alt="playstore" />
-                  <span className="text-[20px] poppins-regular">Google Play</span>
+                  <img src={playstore} alt="playstore" className='w-8 md:w-12' />
+                  <span className="md:text-[20px] poppins-regular">Google Play</span>
                 </a>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function App() {
           </div>
 
           {/* phones */}
-          <div className="relative z-30  md:w-[620px] md:h-[560px] md:mr-[6%] pt-140 md:pt-0" ref={phonesRef}>
+          <div className="relative z-30  md:w-[620px] md:h-[560px] md:mr-[6%] pt-110 md:pt-0" ref={phonesRef}>
 
             {/* Updated style: slower entrance + bigger delays */}
             <style>{`
@@ -352,55 +352,55 @@ export default function App() {
       </section>
 
       {/* Build By Barber */}
-      {/* <section id='services' className='container mx-auto mt-20'>
+      <section id='services' className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
         <BuiltByBarber />
-      </section> */}
+      </section>
 
       {/* Hire barber */}
-      {/* <section className='container mx-auto mt-20'>
+      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
         <HireBarber />
-      </section> */}
+      </section>
 
       {/* Book Your haircut  */}
-      {/* <section className='container mx-auto mt-20'>
+      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
         <BookHaircut />
-      </section> */}
+      </section>
 
       {/* Effortless Shop */}
-      {/* <section className='container mx-auto mt-20'>
+      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
         <EffortlessShop />
-      </section> */}
+      </section>
 
       {/* Simple & transparent Payment */}
-      {/* <section className='container mx-auto mt-20'>
+      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
         <SimplePayment />
-      </section> */}
+      </section>
 
       {/* Live Location */}
-      {/* <section className='container mx-auto mt-20'>
+      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
         <LiveLocation />
-      </section> */}
+      </section>
 
       {/* Call Chat */}
-      {/* <section className='container mx-auto mt-40'>
+      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
         <CallChat />
-      </section> */}
+      </section>
 
       {/* See what’s Trending - */}
-      {/* <section className='container mx-auto mt-40'>
+      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
         <SeeTranding />
-      </section> */}
+      </section>
 
       {/* Meet Founders Section */}
-      {/* <section id='founders' className='container mx-auto mt-20'> 
+      <section id='founders' className='container mx-auto md:mt-20 px-4 xl:px-0'> 
         <MeetFounders />
-      </section> */}
+      </section>
 
 
       {/* footer */}
-      {/* <section id='stay-with-us' className='mt-20'>
+      <section id='stay-with-us' className='mt-4 md:mt-20'>
         <Footer />
-      </section> */}
+      </section>
 
       {/* render the controlled modal once, near root */}
       <LogoVideoModal
