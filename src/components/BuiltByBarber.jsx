@@ -29,7 +29,7 @@ export default function BuiltByBarber() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="  py-16">
+    <section ref={sectionRef} className="  ">
       <style>{`
         .phone-size { width: 180px; height: auto; display: block; }
 
@@ -136,21 +136,24 @@ export default function BuiltByBarber() {
         .reveal { animation: fadeSlideUp 700ms ease forwards; opacity: 0; }
       `}</style>
 
+
+
+
       {/* top */}
       <div className="flex items-baseline mb-10 justify-center">
-            <img src={barber} alt="barber icon" className="w-[160px] h-[182px]" />
-            <h4 className="poppins-semibold text-2xl md:text-3xl xl:text-[55px]">Services</h4>
+            <img src={barber} alt="barber icon" className="w-[160px] h-[182px] " />
+            <h4 className="poppins-semibold text-2xl md:text-3xl xl:text-[55px] -ml-6  transfrom -translate-y-1">Services</h4>
           </div>
 
 
       <div className=" flex flex-col-reverse md:flex-row md:justify-between md:items-center ">
         
         {/* Left: phones */}
-        <div className="relative flex  justify-center md:justify-start items-center" style={{ minHeight: 320 }}>
-          <div className="absolute top-40 md:-left-6 md:top-8 w-[280px] h-[200px] md:w-[322px] md:h-[214px] rounded-tl-[132px] rounded-bl-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
+        <div className="relative mt-10 md:mt-0 flex gap-3 md:gap-5 justify-center  items-center " style={{ minHeight: 320 }}>
+          <div className="absolute top-26 md:-left-6  w-[280px] h-[200px] md:w-[322px] md:h-[214px] rounded-tl-[132px] rounded-bl-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
 
           {/* FRONT phone (comes from bottom) */}
-          <div className="relative z-10 -ml-28 md:ml-[18px] top-14 md:-top-[44px] w-[114px]" >
+          <div className="ml-4 md:mt-10 w-[114px]" >
             <div className="phone-front" style={{ position: "relative", borderRadius: 14 }}>
               <img src={phn2} alt="app preview phone 1" className="w-[114px] h-[242px] " />
               <div className="shine" />
@@ -159,8 +162,8 @@ export default function BuiltByBarber() {
           </div>
 
           {/* BACK phone (comes from top) */}
-          <div className="absolute z-0 right-4 md:-right-[132px] top-14 md:-top-[14px] w-[114px]" >
-            <div className="phone-back" style={{ position: "relative", borderRadius: 14, transform: "scale(0.96)" }}>
+          <div className=" w-[114px] mb-10 md:mb-0" >
+            <div className="phone-back" style={{ position: "relative", borderRadius: 14 }}>
               <img src={phn1} alt="app preview phone 2" className="w-[114px] h-[242px]" />
               <div className="shine" />
               <div className="halo" />

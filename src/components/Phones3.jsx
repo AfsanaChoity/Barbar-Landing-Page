@@ -76,7 +76,7 @@ export default function Phones3() {
             className="relative z-10 transform lg:translate-x-10 xl:translate-x-0 2xl:-translate-x-50 -top-34 md:top-30 "
             style={phoneStyle}
           >
-            <div className="absolute inset-0 flex items-center justify-center h-[164px] w-[85px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full ">
+            <div className="absolute inset-0 flex items-center justify-center ml-0.5 md:ml-0 h-[163px] w-[81px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full ">
               <video
                 ref={refs[0]}
                 className="pointer-events-auto rounded-[8px] md:rounded-[38px] ml-4 md:ml-0"
@@ -102,10 +102,10 @@ export default function Phones3() {
 
           {/* center phone (front, larger visually but same actual size) */}
           <div className="relative z-30 xl:mx-16 -top-24  md:top-20 lg:translate-x-12 xl:translate-x-0" style={mid_phoneStyle}>
-            <div className="absolute inset-0 flex items-center justify-center  h-[200px] w-[100px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full">
+            <div className="absolute inset-0 flex items-center justify-center ml-[px]  h-[199.5px] w-[100px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full">
               <video
                 ref={refs[1]}
-                className="pointer-events-auto rounded-[8px] md:rounded-[38px] ml-4.5 md:ml-0 "
+                className="pointer-events-auto rounded-[10px] md:rounded-[38px] ml-4.5 md:ml-0 "
                 style={videoInnerStyles}
                 muted
                 playsInline
@@ -130,7 +130,7 @@ export default function Phones3() {
             className="relative z-20 transform 2xl:translate-x-50 -top-34 md:top-30 "
             style={phoneStyle}
           >
-            <div className="absolute inset-0  flex items-center justify-center h-[164px] w-[85px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full ">
+            <div className="absolute inset-0  flex items-center justify-center pb-[1px] md:pb-0  h-[164px] w-[84px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full ">
               <video
                 ref={refs[2]}
                 className="pointer-events-auto rounded-[8px] md:rounded-[38px] ml-4 md:ml-0"

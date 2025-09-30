@@ -101,7 +101,7 @@ export default function LogoVideoModal({
                                     <video
 
                                         src={videoSrc}
-                                        className="w-[300px] h-[220px] md:h-[300px] object-cover mx-auto"
+                                        className="w-[250px] h-[220px] md:w-[320px] md:h-[300px] object-cover mx-auto"
                                         autoPlay
                                         loop
                                         playsInline

@@ -1,16 +1,19 @@
 import React, { useRef } from "react";
 import image from "../assets/images/barber/Barber.png";
+// import image from "../assets/images/client/a.png";
 import map from "../assets/images/barber/BarberPhn.svg";
 import arrow from "../assets/svg/rightArrow.svg"
 import { IoIosSearch } from "react-icons/io";
 
 import phn1 from "../assets/images/barber/phn1.svg";
+
 import phn2 from "../assets/images/barber/phn2.svg";
 
 import phn3 from "../assets/images/barber/phn3.svg";
 import phn4 from "../assets/images/barber/phn4.svg";
 import phn5 from "../assets/images/barber/phn5.svg";
 import ScrollingPhones from "./ScrollingPhones";
+
 
 
 const items = [

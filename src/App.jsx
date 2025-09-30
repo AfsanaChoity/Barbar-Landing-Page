@@ -30,6 +30,8 @@ import LogoVideoModal2 from './components/Modal2';
 import { TfiAlignJustify } from "react-icons/tfi";
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
+import phoneframe from "./assets/svg/Phone_Mockup.svg";
+import phoneframe2 from "./assets/Hiring.png";
 
 
 // --- mobileMenuItems: keys are section ids and labels are styled ---
@@ -99,7 +101,7 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
-  
+
 
   return (
     <div className=''>
@@ -110,8 +112,8 @@ export default function App() {
 
         {/* bg images */}
         <div className='w-full '>
-          <img src={vector8} alt="bg1" className="absolute inset-0 w-full object-cover pointer-events-none z-10 h-[820px] md:h-full  " />
-          <img src={vector9} alt="bg2" className="absolute inset-0 w-full object-cover pointer-events-none z-0  h-[920px] md:h-full lg:mt-[160px] mt-[38px] xl:mt-[117px] 2xl:mt-[97px]"
+          <img src={vector8} alt="bg1" className="absolute inset-0 w-full object-cover pointer-events-none z-10 h-[820px] lg:h-full  " />
+          <img src={vector9} alt="bg2" className="absolute inset-0 w-full object-cover pointer-events-none z-0  h-[920px] lg:h-full mt-[38px] lg:mt-[150px]  xl:mt-[117px] 2xl:mt-[97px]"
           />
         </div>
 
@@ -119,7 +121,7 @@ export default function App() {
         <nav className=''>
           <div className='flex items-center justify-between p-4 gap-2 '>
             {/* logo */}
-            <div className='z-20  -translate-y-8 md:-translate-y-0'>
+            <div className='z-20  -translate-y-8 lg:-translate-y-0'>
               <button
                 onClick={() => setOpen(true)}
                 className='cursor-pointer'
@@ -137,8 +139,8 @@ export default function App() {
               </div>
 
               {/* lists */}
-              <div className='hidden md:block  '>
-                <ul className='urbanist-semibold  md:text-[20px] xl:text-[22px] flex'>
+              <div className='hidden lg:block'>
+                <ul className='urbanist-semibold  lg:text-[20px] xl:text-[22px] flex'>
                   <a href="#"><li className="mx-4 cursor-pointer">Home</li></a>
                   <a href="#services"><li className="mx-4 cursor-pointer">Services</li></a>
                   <a href="#map"><li className="mx-4 cursor-pointer">Map</li></a>
@@ -151,35 +153,35 @@ export default function App() {
 
               <div className='flex items-center gap-2'>
                 {/* Button */}
-              <div className=''>
-                <a href='#stay-with-us' className='urbanist-bold text-xs md:text-[20px] xl:text-[22px] border  border-black rounded-[100px] px-2 py-2 md:px-4 md:py-4 xl:px-[38px] xl:py-[18px]'>Stay With Us</a>
-              </div>
+                <div className=''>
+                  <a href='#stay-with-us' className='urbanist-bold text-xs md:text-[20px] xl:text-[22px] border  border-black rounded-[100px] px-2 py-2 md:px-4 md:py-4 xl:px-[38px] xl:py-[18px]'>Stay With Us</a>
+                </div>
 
-              {/* mobile hamburger */}
-              <div className="md:hidden">
-                <Dropdown
-                  menu={{
-                    items: mobileMenuItems,           
-                    onClick: ({ key }) => {
-                     
-                      setCurrent(key);
-                      
-                      const map = { '0': 'home', '1': 'services', '2': 'map', '3': 'features', '4': 'founders' };
-                      const id = map[key] ?? key;
-                      const el = document.getElementById(id);
-                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      else window.location.hash = `#${id}`;
-                    }
-                  }}
-                  trigger={['click']}
-                  placement="bottomRight"
-                  getPopupContainer={() => document.body} 
-                >
-                  <button type="button" aria-label="Open menu" className="rounded flex items-center">
-                    <TfiAlignJustify style={{ fontSize: 20 }} />
-                  </button>
-                </Dropdown>
-              </div>
+                {/* mobile hamburger */}
+                <div className="lg:hidden">
+                  <Dropdown
+                    menu={{
+                      items: mobileMenuItems,
+                      onClick: ({ key }) => {
+
+                        setCurrent(key);
+
+                        const map = { '0': 'home', '1': 'services', '2': 'map', '3': 'features', '4': 'founders' };
+                        const id = map[key] ?? key;
+                        const el = document.getElementById(id);
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        else window.location.hash = `#${id}`;
+                      }
+                    }}
+                    trigger={['click']}
+                    placement="bottomRight"
+                    getPopupContainer={() => document.body}
+                  >
+                    <button type="button" aria-label="Open menu" className="rounded flex items-center">
+                      <TfiAlignJustify style={{ fontSize: 20 }} />
+                    </button>
+                  </Dropdown>
+                </div>
               </div>
 
 
@@ -193,7 +195,7 @@ export default function App() {
 
         {/* Content+ image */}
 
-        <div className='flex flex-col md:flex-row  md:justify-between'>
+        <div className='flex flex-col md:flex-row  lg:justify-between'>
 
           {/* content */}
           <div className='relative  z-30 w-[277px] lg:w-[697px] ml-[10%] -mt-20 '>
@@ -202,13 +204,13 @@ export default function App() {
             </h1>
 
             {/* Input */}
-            <div className="mt-10 flex items-center lg:w-[360px] xl:w-[437px]  2xl:w-[537px] md:h-[60px] rounded-full border border-black overflow-hidden">
+            <div className="mt-10 flex justify-between items-center  w-[280px] md:w-[320px] lg:w-[360px] xl:w-[437px]  2xl:w-[537px] lg:h-[60px] rounded-full border border-black overflow-hidden">
               <input
                 type="email"
                 placeholder="Enter email address"
-                className="text-sm md:text-[16px]  flex-1 px-2 py-3 lg:px-4 lg:py-3 outline-none poppins-medium text-black placeholder:text-black/80"
+                className="text-sm lg:text-[16px]   pl-2 py-3 lg:px-4 lg:py-3 outline-none poppins-medium text-black placeholder:text-black/80"
               />
-              <button className="cursor-pointer bg-black text-white px-6 py-4  lg:px-10 lg:py-5 rounded-full poppins-regular text-xs md:text-[16px]">
+              <button className="cursor-pointer bg-black text-white w-[110px] md:w-[160px] py-4   lg:px-10 lg:py-5 rounded-full poppins-regular text-xs md:text-[16px]">
                 Notify me
               </button>
             </div>
@@ -227,7 +229,7 @@ export default function App() {
                   href="#"
                   className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg w-[211px] "
                 >
-                  <img src={apple} alt="apple" className='w-10 md:w-14' />
+                  <img src={apple} alt="apple" className='w-10 lg:w-14' />
                   <span className="md:text-[20px] poppins-regular">App Store</span>
                 </a>
 
@@ -236,7 +238,7 @@ export default function App() {
                   href="#"
                   className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg w-[211px] "
                 >
-                  <img src={playstore} alt="playstore" className='w-8 md:w-12' />
+                  <img src={playstore} alt="playstore" className='w-8 lg:w-12' />
                   <span className="md:text-[20px] poppins-regular">Google Play</span>
                 </a>
               </div>
@@ -246,7 +248,7 @@ export default function App() {
           </div>
 
           {/* phones */}
-          <div className="relative z-30  md:w-[620px] md:h-[560px] md:mr-[6%] pt-110 md:pt-0" ref={phonesRef}>
+          <div className="relative  z-30 md:w-[500px] md:h-[400px]  lg:w-[620px] lg:h-[560px] md:mr-[2%] lg:mr-[6%] pt-110 md:pt-0" ref={phonesRef}>
 
             {/* Updated style: slower entrance + bigger delays */}
             <style>{`
@@ -273,21 +275,23 @@ export default function App() {
       `}</style>
 
             {/* RIGHT phone — front/top layer (arrives last) */}
-            <img
-              src={phn1}
-              alt="phone right"
-              className="phone absolute right-0 bottom-0 w-[160px] md:w-[260px] xl:w-[280px]
+            <div>
+              <img
+                src={phn1}
+                alt="phone right"
+                className="phone absolute right-0 bottom-0 w-[160px] lg:w-[260px] xl:w-[280px]
           z-30 -translate-x-[6px]
           md:translate-x-[6px] -translate-y-[70px]
           phone-delay-2 "
-            />
+              />
+            </div>
 
             {/* CENTER phone — middle layer, slightly behind (arrives second) */}
             <img
               src={phn2}
               alt="phone middle"
-              className="phone absolute left-[40%] bottom-[22px] -translate-x-[30%] md:-translate-x-1/2 translate-y-[20px]
-          w-[160px] md:w-[260px] xl:w-[280px] z-20
+              className="phone absolute left-[40%] bottom-[22px] -translate-x-[30%] lg:-translate-x-1/2 translate-y-[20px]
+          w-[160px] lg:w-[260px] xl:w-[280px] z-20
           phone-delay-1"
             />
 
@@ -295,8 +299,8 @@ export default function App() {
             <img
               src={phn3}
               alt="phone left"
-              className="phone absolute -left-[20%] bottom-[46px]
-          w-[160px] md:w-[260px] xl:w-[280px]  z-10 translate-x-[50%]  md:translate-x-[0%] translate-y-[120px]
+              className="phone absolute -left-[18%] bottom-[46px]
+          w-[160px] lg:w-[260px] xl:w-[280px]  z-10 translate-x-[50%] md:translate-x-[40%]  lg:translate-x-[0%] translate-y-[120px]
           phone-delay-0"
             />
           </div>
@@ -310,97 +314,97 @@ export default function App() {
 
 
       {/* core feacture setion */}
-      <section id='features' className='mt-20 md:mt-50'>
+      <section id='features' className='mt-20 md:mt-30 lg:mt-50'>
         <CoreFeatures />
       </section>
 
       {/* 3 phones section */}
-      <section className=' mt-20 lg:mt-120 '>
+      {/* <section className=' mt-20 lg:mt-120 '>
         <Phones3 />
-      </section>
+      </section> */}
 
       {/* Map View Section */}
-      <section id='map' className='container mx-auto mt-30 md:mt-40 xl:mt-80 scroll-mt-40'>
-          <MapView />
-      </section>
+      {/* <section id='map' className='container mx-auto mt-30 md:mt-40 xl:mt-80 scroll-mt-40'>
+        <MapView />
+      </section> */}
 
 
 
       {/* Meet Section */}
-      <section className='container mx-auto mt-16 lg:mt-30 px-4 xl:px-0'>
+      {/* <section className='container mx-auto mt-16 lg:mt-30 px-4 xl:px-0'>
         <MeetAskRey />
-      </section>
+      </section> */}
 
       {/* Smarter Queues Section */}
-      <section className='container mx-auto mt-16 lg:mt-30 px-4 xl:px-0'>
+      {/* <section className='container mx-auto mt-16 lg:mt-30 px-4 xl:px-0'>
         <SmarterQueues />
-      </section>
+      </section> */}
 
       {/* About Clients Section */}
-      <section className='container mx-auto md:mt-50 px-4 xl:px-0'>
+      {/* <section className='container mx-auto md:mt-50 px-4 xl:px-0'>
         <AboutClients />
-      </section>
+      </section> */}
 
       {/* About barber Section */}
-      <section className='container mx-auto mt-10 md:mt-50 px-4 xl:px-0'>
+      {/* <section className='container mx-auto mt-10 md:mt-50 px-4 xl:px-0'>
         <AboutBarber />
-      </section>
+      </section> */}
 
       {/* About Owner Section */}
-      <section className='container mx-auto mt-10 md:mt-50 px-4 xl:px-0'>
+      {/* <section className='container mx-auto mt-10 md:mt-50 px-4 xl:px-0'>
         <Owner />
-      </section>
+      </section> */}
 
       {/* Build By Barber */}
-      <section id='services' className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
+      {/* <section id='services' className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <BuiltByBarber />
-      </section>
+      </section> */}
 
       {/* Hire barber */}
-      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
+      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <HireBarber />
-      </section>
+      </section> */}
 
       {/* Book Your haircut  */}
-      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
+      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <BookHaircut />
-      </section>
+      </section> */}
 
       {/* Effortless Shop */}
-      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
+      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <EffortlessShop />
-      </section>
+      </section> */}
 
       {/* Simple & transparent Payment */}
-      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
+      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <SimplePayment />
-      </section>
+      </section> */}
 
       {/* Live Location */}
-      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
+      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <LiveLocation />
-      </section>
+      </section> */}
 
       {/* Call Chat */}
-      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
+      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <CallChat />
-      </section>
+      </section> */}
 
       {/* See what’s Trending - */}
-      <section className='container mx-auto md:mt-20 px-4 md:px-8 xl:px-0'>
+      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <SeeTranding />
-      </section>
+      </section> */}
 
       {/* Meet Founders Section */}
-      <section id='founders' className='container mx-auto md:mt-20 px-4 xl:px-0'> 
+      {/* <section id='founders' className='container mx-auto md:mt-20 px-4 xl:px-0'>
         <MeetFounders />
-      </section>
+      </section> */}
 
 
       {/* footer */}
-      <section id='stay-with-us' className='mt-4 md:mt-20'>
+      {/* <section id='stay-with-us' className='mt-4 md:mt-20'>
         <Footer />
-      </section>
+      </section> */}
 
       {/* render the controlled modal once, near root */}
       <LogoVideoModal

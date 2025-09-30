@@ -77,7 +77,7 @@ export default function CoreFeatures() {
     return (
         <section className="container mx-auto px-4 md:px-6 lg:px-8 py-14 ">
             {/* Heading */}
-            <h2 className="text-center poppins-semibold text-[34px] md:text-[64px] text-[#333333] mb-8">
+            <h2 className="text-center poppins-semibold text-[34px] md:text-[44px] lg:text-[64px] text-[#333333] mb-8">
                 Core Features
             </h2>
 
@@ -92,13 +92,13 @@ export default function CoreFeatures() {
 
                 {/* Phone mockup (center) */}
                 <div className="order-1 lg:order-2">
-                    <div className="relative mx-auto w-[200px]  md:w-[300px] xl:w-[380px]   ">
-                       <div className="border-4 border-gray-500 rounded-[48px] shadow shadow-black/45">
-                         <div className="relative rounded-[44px] bg-black shadow-2xl p-2">
+                    <div className="relative mx-auto w-[220px]  md:w-[300px] xl:w-[380px]   ">
+                       <div className="border-4 border-gray-500 rounded-[38px] md:rounded-[48px] shadow shadow-black/45">
+                         <div className="relative rounded-[34px] md:rounded-[44px] bg-black shadow-2xl p-2">
                             <div className="absolute left-1/2 -translate-x-1/2 top-2 w-24 h-5 bg-black rounded-b-2xl" />
                             <div className="rounded-[36px] bg-[#EA8653] px-4 py-14">
                                 
-                                <div className="rounded-3xl shadow-inner overflow-hidden">
+                                <div className="rounded-2xl md:rounded-3xl shadow-inner overflow-hidden">
                                     <video
                                         src={logoVideo}
                                         className="w-full h-[300px] md:h-[500px] xl:h-[700px] object-cover"

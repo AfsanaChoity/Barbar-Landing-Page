@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import phn1 from "../assets/images/smallPhn8.svg";
 import phn2 from "../assets/images/smallPhn7.svg";
+import RightPhones from "./shared/RightPhones";
 
 export default function EffortlessShop() {
   const sectionRef = useRef(null);
@@ -27,7 +28,7 @@ export default function EffortlessShop() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16">
+    <section ref={sectionRef} className="">
       {/* --- keep all your styles as is (unchanged) --- */}
 
       <div className=" flex flex-col md:flex-row md:gap-20 xl:gap-[20%] md:items-center ">
@@ -83,14 +84,15 @@ export default function EffortlessShop() {
         </div>
 
         {/* Right: phones */}
-        <div
+        <RightPhones phn1={phn1} phn2={phn2}/>
+        {/* <div
           className="relative flex  justify-center md:justify-start items-center"
           style={{ minHeight: 320 }}
         >
           <div className="absolute top-40 md:-left-6 md:top-8 w-[280px] h-[200px] md:w-[322px] md:h-[214px] rounded-tl-[132px] rounded-bl-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
 
           {/* FRONT phone (comes from bottom) */}
-          <div
+          {/* <div
             className="relative z-10 -ml-28 md:ml-[18px] top-14 md:-top-[44px] w-[114px]"
           >
             <div
@@ -105,10 +107,10 @@ export default function EffortlessShop() {
               <div className="shine" />
               <div className="halo" />
             </div>
-          </div>
+          </div> */}
 
           {/* BACK phone (comes from top */}
-          <div
+          {/* <div
              className="absolute z-0 right-4 md:-right-[132px] top-14 md:-top-[14px] w-[114px]"
           >
             <div
@@ -128,7 +130,7 @@ export default function EffortlessShop() {
               <div className="halo" />
             </div>
           </div>
-        </div>
+        </div> */} 
       </div>
     </section>
   );
