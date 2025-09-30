@@ -248,7 +248,8 @@ export default function App() {
           </div>
 
           {/* phones */}
-          <div className="relative  z-30 md:w-[500px] md:h-[400px]  lg:w-[620px] lg:h-[560px] md:mr-[2%] lg:mr-[6%] pt-110 md:pt-0" ref={phonesRef}>
+          {/* <div className="relative border  z-30 md:w-[500px] md:h-[400px]  lg:w-[620px] lg:h-[560px] md:mr-[2%] lg:mr-[6%] pt-110 md:pt-0" ref={phonesRef}> */}
+          <div className="relative   z-30 " ref={phonesRef}>
 
             {/* Updated style: slower entrance + bigger delays */}
             <style>{`
@@ -314,9 +315,9 @@ export default function App() {
 
 
       {/* core feacture setion */}
-      <section id='features' className='mt-20 md:mt-30 lg:mt-50'>
+      {/* <section id='features' className='mt-20 md:mt-30 lg:mt-50'>
         <CoreFeatures />
-      </section>
+      </section> */}
 
       {/* 3 phones section */}
       {/* <section className=' mt-20 lg:mt-120 '>

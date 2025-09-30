@@ -69,11 +69,11 @@ export default function Phones3() {
       </div>
 
       {/* phones wrapper (shown on md and up like your earlier layout) */}
-      <div className="md:flex items-end justify-center w-full absolute inset-0 pointer-events-none ">
+      <div className="md:flex   justify-center w-full absolute inset-0 pointer-events-none ">
         <div className="relative  flex justify-center items-end">
           {/* left phone (behind) */}
           <div
-            className="relative z-10 transform lg:translate-x-10 xl:translate-x-0 2xl:-translate-x-50 -top-34 md:top-30 "
+            className="relative z-10 transform lg:translate-x-10 xl:translate-x-0 2xl:-translate-x-50 -top-34 md:top-30 lg:top-50 xl:top-30 "
             style={phoneStyle}
           >
             <div className="absolute inset-0 flex items-center justify-center ml-0.5 md:ml-0 h-[163px] w-[81px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full ">
@@ -101,7 +101,7 @@ export default function Phones3() {
           </div>
 
           {/* center phone (front, larger visually but same actual size) */}
-          <div className="relative z-30 xl:mx-16 -top-24  md:top-20 lg:translate-x-12 xl:translate-x-0" style={mid_phoneStyle}>
+          <div className="relative z-30 xl:mx-16 -top-24  md:top-20 lg:top-60 xl:top-20 lg:translate-x-12 xl:translate-x-0" style={mid_phoneStyle}>
             <div className="absolute inset-0 flex items-center justify-center ml-[px]  h-[199.5px] w-[100px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full">
               <video
                 ref={refs[1]}
@@ -127,7 +127,7 @@ export default function Phones3() {
 
           {/* right phone (behind) */}
           <div
-            className="relative z-20 transform 2xl:translate-x-50 -top-34 md:top-30 "
+            className="relative z-20 transform 2xl:translate-x-50 -top-34 md:top-30 lg:top-50 xl:top-30  "
             style={phoneStyle}
           >
             <div className="absolute inset-0  flex items-center justify-center pb-[1px] md:pb-0  h-[164px] w-[84px]  md:w-[300px] md:h-[600px] xl:h-full xl:w-full ">
