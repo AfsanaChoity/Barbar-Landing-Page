@@ -176,7 +176,7 @@ export default function App() {
                     trigger={['click']}
                     placement="bottomRight"
                     getPopupContainer={() => document.body}
-                   
+                    align={{ offset: [0, 10] }}
 
                   >
                     <button type="button" aria-label="Open menu" className="rounded flex items-center">
@@ -200,27 +200,16 @@ export default function App() {
         <div className='container mx-auto -mt-10 px-4 lg:px-10 xl:px-0 flex flex-col md:flex-row  lg:justify-between'>
 
           {/* content */}
-          {/* <div className='relative  z-30 w-[277px] lg:w-[697px] ml-[10%] -mt-20 border'> */}
           <div className='relative  z-30  '>
             <h1 className='text-[#000000] lg:mt-4 xl:mt-0  text-[26px] lg:text-[44px] xl:text-[60px] 2xl:text-[80px] poppins-bold '>
               Get Notified When We Launch
             </h1>
 
             {/* Input */}
-            {/* <div className="mt-10 w-[280px] lg:w-[80%] 2xl:w-[60%] flex justify-between items-center   rounded-full border border-black overflow-hidden"> */}
             <div className="mt-10 border rounded-full w-[280px] lg:w-[70%] xl:w-[50%]">
-              {/* <input
-                type="email"
-                placeholder="Enter email address" */}
-              {/* className="text-sm lg:text-[16px] pl-4 py-2 xl:py-4 focus:outline-0  poppins-medium text-black placeholder:text-black/80"
-                className="text-sm lg:text-[16px]  poppins-medium text-black placeholder:text-black/80 border"
-              /> */}
-              {/* <button className="cursor-pointer py-3 xl:py-5 px-4  lg:px-6 xl:px-8 bg-black text-white  rounded-full poppins-regular text-xs md:text-[16px]">
-                Notify me
-              </button> */}
 
               <Space.Compact style={{ width: '100%' }}>
-                <Input placeholder="Enter email address" className=' poppins-medium !bg-transparent !border-none !rounded-tl-full !rounded-bl-full '/>
+                <Input placeholder="Enter email address" className=' poppins-medium !bg-transparent !border-none !rounded-tl-full !rounded-bl-full ' />
                 <Button type="primary" className='!rounded-full !bg-black poppins-regular !py-4 lg:!py-5 xl:!py-6 lg:!px-8'>Notify me</Button>
               </Space.Compact>
             </div>
@@ -258,69 +247,68 @@ export default function App() {
           </div>
 
           {/* phones */}
-          {/* <div className="relative   z-30 md:w-[500px] md:h-[400px]  lg:w-[620px] lg:h-[560px] md:mr-[2%] lg:mr-[6%] pt-110 md:pt-0" ref={phonesRef}> */}
-          <div className="relative flex  z-30 " ref={phonesRef}>
+          <div className="relative flex  z-30" ref={phonesRef}>
 
             {/* Updated style: slower entrance + bigger delays */}
-            <style>{`
-        /* keyframes: drop in from below, larger overshoot, gentler settle */
-        @keyframes phoneIn {
-          0%   { transform: translateY(300px) scale(.98); opacity: 0; }
-          60%  { transform: translateY(-30px) scale(1.03); opacity: 1; }
-          80%  { transform: translateY(12px) scale(.995); }
-          100% { transform: translateY(0) scale(1); }
-        }
 
-        .phone-enter {
-          animation-name: phoneIn;
-          animation-duration: 4000ms;                       /* slower overall */
-          animation-timing-function: cubic-bezier(.22,1.1,.24,1); /* smooth bounce */
-          
-          animation-fill-mode: both; /* keep final state */
-          will-change: transform, opacity;
-        }
+ <style>{`
+    @keyframes phoneIn {
+      0%   { transform: translateY(300px); opacity: 0; }
+      60%  { transform: translateY(-30px); opacity: 1; }
+      80%  { transform: translateY(12px); }
+      100% { transform: translateY(0); }
+    }
 
-        /* increased sequencing delays for a clearer staggered entrance */
-        .phone-delay-0 { animation-delay: 0.5s; }    /* first to appear (phn3) */
-        .phone-delay-1 { animation-delay: 3.5s; }    /* second (phn2) */
-        .phone-delay-2 { animation-delay: 7s; }    /* last (phn1) */
-      `}</style>
+    .phone-enter {
+      animation-name: phoneIn;
+      animation-duration: 3000ms;
+      animation-timing-function: cubic-bezier(.22,1.1,.24,1);
+      animation-fill-mode: both;
+      will-change: transform, opacity;
+      /* GPU / rendering hints */
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translateZ(0);
+      /* make sure no CSS blur/filter accidentally applied */
+      filter: none;
+      image-rendering: auto;
+    }
 
+    .phone-delay-0 { animation-delay: 0.5s; }
+    .phone-delay-1 { animation-delay: 2s; }
+    .phone-delay-2 { animation-delay: 3.5s; }
+
+    /* optional: ensure the img fills integer px sizes */
+    .phone-enter img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 280px; /* change if needed */
+    }
+  `}</style>
             {/* RIGHT phone — front/top layer (arrives last) */}
             <div>
               <img
                 src={phn3}
                 alt="phone right"
-                className='phone-enter relative top-28 -right-20 phone-delay-0 2xl:w-[280px]'
-              //       className="phone absolute right-0 bottom-0 w-[160px] lg:w-[260px] xl:w-[280px]
-              // z-30 -translate-x-[6px]
-              // md:translate-x-[6px] -translate-y-[70px]
-              // phone-delay-2 "
-              />
+                className='phone-enter relative top-28 2xl:top-40 -right-20 phone-delay-0 2xl:w-[560px]' />
             </div>
-
+  
             {/* CENTER phone — middle layer, slightly behind (arrives second) */}
             <div>
               <img
                 src={phn2}
                 alt="phone middle"
-                className='phone-enter relative top-14 -right-10 phone-delay-1 2xl:w-[280px]'
-              //     className="phone absolute left-[40%] bottom-[22px] -translate-x-[30%] lg:-translate-x-1/2 translate-y-[20px]
-              // w-[160px] lg:w-[260px] xl:w-[280px] z-20
-              // phone-delay-1"
-              />
+                className='phone-enter relative top-14 2xl:top-20 -right-10 phone-delay-1 2xl:w-[560px]' />
             </div>
 
             {/* LEFT phone — back layer, more tilt (arrives first from bottom) */}
             <div>
               <img
                 src={phn1}
-                alt="phone left"
-                className='phone-enter relative top-0 right-0  phone-delay-2 2xl:w-[280px]'
-              //     className="phone absolute -left-[18%] bottom-[46px]
-              // w-[160px] lg:w-[260px] xl:w-[280px]  z-10 translate-x-[50%] md:translate-x-[40%]  lg:translate-x-[0%] translate-y-[120px]
-              // phone-delay-0"
-              />
+                alt="phone left" 
+                className='phone-enter relative top-0 right-0  phone-delay-2 2xl:w-[560px]' />
             </div>
 
           </div>
