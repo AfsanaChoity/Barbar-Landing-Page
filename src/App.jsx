@@ -62,8 +62,6 @@ const mobileMenuItems = [
 export default function App() {
   const [open, setOpen] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
-
-  const [openDrawer, setOpenDrawer] = useState(false);
   const [current, setCurrent] = useState("home");
 
   // for animation
@@ -118,15 +116,16 @@ export default function App() {
         </div>
 
         {/* navbar */}
-        <nav className=''>
-          <div className='flex items-center justify-between p-4 gap-2 '>
+        <nav className=' relative z-30'>
+          <div className='flex items-center justify-between px-4 pt-8 md:pt-4 lg:pt-0 gap-2 '>
             {/* logo */}
-            <div className='z-20  -translate-y-8 lg:-translate-y-0'>
+            <div className='z-20  -translate-y-8 lg:-translate-y-0 '>
               <button
                 onClick={() => setOpen(true)}
                 className='cursor-pointer'
               >
-                <img src={logo} alt="logo" className='h-[209px] w-[96px]' />
+                {/* <img src={logo} alt="logo" className='h-[209px] w-[96px]' /> */}
+                <img src={logo} alt="logo" className='' />
               </button>
             </div>
 
@@ -195,31 +194,32 @@ export default function App() {
 
         {/* Content+ image */}
 
-        <div className='flex flex-col md:flex-row  lg:justify-between'>
+        <div className='container mx-auto -mt-10 px-4 lg:px-10 xl:px-0 flex flex-col md:flex-row  lg:justify-between'>
 
           {/* content */}
-          <div className='relative  z-30 w-[277px] lg:w-[697px] ml-[10%] -mt-20 '>
-            <h1 className='text-[#000000] text-[26px] lg:text-[50px] xl:text-[60px] 2xl:text-[80px] poppins-bold '>
+          {/* <div className='relative  z-30 w-[277px] lg:w-[697px] ml-[10%] -mt-20 border'> */}
+          <div className='relative  z-30  '>
+            <h1 className='text-[#000000] lg:mt-4 xl:mt-0  text-[26px] lg:text-[44px] xl:text-[60px] 2xl:text-[80px] poppins-bold '>
               Get Notified When We Launch
             </h1>
 
             {/* Input */}
-            <div className="mt-10 flex justify-between items-center  w-[280px] md:w-[320px] lg:w-[360px] xl:w-[437px]  2xl:w-[537px] lg:h-[60px] rounded-full border border-black overflow-hidden">
+            <div className="mt-10 w-[250px] md:w-full lg:w-[80%] 2xl:w-[60%] flex justify-between items-center   rounded-full border border-black overflow-hidden">
               <input
                 type="email"
                 placeholder="Enter email address"
-                className="text-sm lg:text-[16px]   pl-2 py-3 lg:px-4 lg:py-3 outline-none poppins-medium text-black placeholder:text-black/80"
+                className="text-sm lg:text-[16px] pl-4 py-2 xl:py-4    poppins-medium text-black placeholder:text-black/80"
               />
-              <button className="cursor-pointer bg-black text-white w-[110px] md:w-[160px] py-4   lg:px-10 lg:py-5 rounded-full poppins-regular text-xs md:text-[16px]">
+              <button className="cursor-pointer py-3 xl:py-5 px-2 lg:px-6 xl:px-8 bg-black text-white  rounded-full poppins-regular text-xs md:text-[16px]">
                 Notify me
               </button>
             </div>
 
             {/* Available on */}
-            <div className=" space-y-4 mt-8 ">
+            <div className=" space-y-4 mt-8  ">
               {/* Title */}
-              <div className=''>
-                <h3 className="text-white text-2xl lg:text-[30px] poppins-medium">Available on</h3>
+              <div className=' '>
+                <h3 className="text-white  text-2xl lg:text-[30px] poppins-medium">Available on</h3>
               </div>
 
               {/* Buttons */}
@@ -227,18 +227,18 @@ export default function App() {
                 {/* App Store */}
                 <a
                   href="#"
-                  className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg w-[211px] "
+                  className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg w-[180px] md:w-[211px] "
                 >
-                  <img src={apple} alt="apple" className='w-10 lg:w-14' />
+                  <img src={apple} alt="apple" className='w-8 md:w-10 xl:w-14' />
                   <span className="md:text-[20px] poppins-regular">App Store</span>
                 </a>
 
                 {/* Google Play */}
                 <a
                   href="#"
-                  className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg w-[211px] "
+                  className="flex items-center space-x-2 bg-black text-white md:Z px-4 py-2 rounded-lg w-[180px] md:w-[211px] "
                 >
-                  <img src={playstore} alt="playstore" className='w-8 lg:w-12' />
+                  <img src={playstore} alt="playstore" className='w-6 md:w-8 xl:w-12' />
                   <span className="md:text-[20px] poppins-regular">Google Play</span>
                 </a>
               </div>
@@ -248,8 +248,8 @@ export default function App() {
           </div>
 
           {/* phones */}
-          {/* <div className="relative border  z-30 md:w-[500px] md:h-[400px]  lg:w-[620px] lg:h-[560px] md:mr-[2%] lg:mr-[6%] pt-110 md:pt-0" ref={phonesRef}> */}
-          <div className="relative   z-30 " ref={phonesRef}>
+          {/* <div className="relative   z-30 md:w-[500px] md:h-[400px]  lg:w-[620px] lg:h-[560px] md:mr-[2%] lg:mr-[6%] pt-110 md:pt-0" ref={phonesRef}> */}
+          <div className="relative flex  z-30 " ref={phonesRef}>
 
             {/* Updated style: slower entrance + bigger delays */}
             <style>{`
@@ -263,47 +263,56 @@ export default function App() {
 
         .phone-enter {
           animation-name: phoneIn;
-          animation-duration: 2600ms;                       /* slower overall */
+          animation-duration: 4000ms;                       /* slower overall */
           animation-timing-function: cubic-bezier(.22,1.1,.24,1); /* smooth bounce */
+          
           animation-fill-mode: both; /* keep final state */
           will-change: transform, opacity;
         }
 
         /* increased sequencing delays for a clearer staggered entrance */
         .phone-delay-0 { animation-delay: 0.5s; }    /* first to appear (phn3) */
-        .phone-delay-1 { animation-delay: 1.5s; }    /* second (phn2) */
-        .phone-delay-2 { animation-delay: 2.3s; }    /* last (phn1) */
+        .phone-delay-1 { animation-delay: 4s; }    /* second (phn2) */
+        .phone-delay-2 { animation-delay: 7.5s; }    /* last (phn1) */
       `}</style>
 
             {/* RIGHT phone — front/top layer (arrives last) */}
             <div>
               <img
-                src={phn1}
+                src={phn3}
                 alt="phone right"
-                className="phone absolute right-0 bottom-0 w-[160px] lg:w-[260px] xl:w-[280px]
-          z-30 -translate-x-[6px]
-          md:translate-x-[6px] -translate-y-[70px]
-          phone-delay-2 "
+                className='phone-enter relative top-28 -right-20 phone-delay-0 2xl:w-[280px]'
+          //       className="phone absolute right-0 bottom-0 w-[160px] lg:w-[260px] xl:w-[280px]
+          // z-30 -translate-x-[6px]
+          // md:translate-x-[6px] -translate-y-[70px]
+          // phone-delay-2 "
               />
             </div>
 
             {/* CENTER phone — middle layer, slightly behind (arrives second) */}
-            <img
+            <div>
+              <img
               src={phn2}
               alt="phone middle"
-              className="phone absolute left-[40%] bottom-[22px] -translate-x-[30%] lg:-translate-x-1/2 translate-y-[20px]
-          w-[160px] lg:w-[260px] xl:w-[280px] z-20
-          phone-delay-1"
+              className='phone-enter relative top-14 -right-10 phone-delay-1 2xl:w-[280px]'
+          //     className="phone absolute left-[40%] bottom-[22px] -translate-x-[30%] lg:-translate-x-1/2 translate-y-[20px]
+          // w-[160px] lg:w-[260px] xl:w-[280px] z-20
+          // phone-delay-1"
             />
+            </div>
 
             {/* LEFT phone — back layer, more tilt (arrives first from bottom) */}
-            <img
-              src={phn3}
+           <div>
+             <img
+              src={phn1}
               alt="phone left"
-              className="phone absolute -left-[18%] bottom-[46px]
-          w-[160px] lg:w-[260px] xl:w-[280px]  z-10 translate-x-[50%] md:translate-x-[40%]  lg:translate-x-[0%] translate-y-[120px]
-          phone-delay-0"
+              className='phone-enter relative top-0 right-0  phone-delay-2 2xl:w-[280px]'
+          //     className="phone absolute -left-[18%] bottom-[46px]
+          // w-[160px] lg:w-[260px] xl:w-[280px]  z-10 translate-x-[50%] md:translate-x-[40%]  lg:translate-x-[0%] translate-y-[120px]
+          // phone-delay-0"
             />
+           </div>
+
           </div>
 
 
