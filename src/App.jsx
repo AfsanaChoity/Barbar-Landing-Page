@@ -154,7 +154,7 @@ export default function App() {
               <div className='flex items-center gap-2'>
                 {/* Button */}
                 <div className=''>
-                  <a href='#stay-with-us' className='urbanist-bold text-xs md:text-[20px] xl:text-[22px] border  border-black rounded-[100px] px-2 py-2 md:px-4 md:py-4 xl:px-[38px] xl:py-[18px]'>Stay With Us</a>
+                  <a href='#stay-with-us' className='urbanist-bold text-xs lg:text-[20px] xl:text-[22px] border  border-black rounded-[100px] px-2 py-2 md:px-4 lg:py-4 xl:px-[38px] xl:py-[18px]'>Stay With Us</a>
                 </div>
 
                 {/* mobile hamburger */}

@@ -51,14 +51,14 @@ export default function LogoVideoModal({
     return (
         <>
             {isOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-6 ">
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
                     {/* backdrop */}
                     <div className="absolute inset-0 bg-black/40 " onClick={onClose} aria-hidden />
 
                     {/* animated modal card */}
                     <div
 
-                        className="relative w-full max-w-2xl lv-modal-card lv-inner-shadow overflow-hidden"
+                        className="relative  md:w-[70%] lg:max-w-2xl lv-modal-card lv-inner-shadow overflow-hidden"
                     >
                         <div className="absolute z-20 top-0">
                             <img src={welcome} alt="" className="w-[357px] h-[357px]" />
@@ -79,7 +79,7 @@ export default function LogoVideoModal({
 
                         <div className="lv-confetti" />
 
-                        <div className="relative p-6 md:p-10">
+                        <div className="relative p-6 lg:p-10 ">
                             <button
                                 onClick={onClose}
                                 className="cursor-pointer absolute top-4 right-4 z-50 rounded-full bg-white/40 backdrop-blur-sm p-2 lv-close-btn"
@@ -96,12 +96,12 @@ export default function LogoVideoModal({
                             <h2 className="urbanist-medium mb-6 text-[28px] md:text-[48px] text-center text-[#161A1A]">Welcome To</h2>
 
 
-                            <div className="mt-4 flex justify-center">
+                            <div className="mt-4 flex justify-center px-4 md:px-0">
                                 <div className="relative z-30">
                                     <video
 
                                         src={videoSrc}
-                                        className="w-[250px] h-[220px] md:w-[320px] md:h-[300px] object-cover mx-auto"
+                                        className="w-[250px] h-[220px] lg:w-[320px] lg:h-[300px] object-cover mx-auto"
                                         autoPlay
                                         loop
                                         playsInline
