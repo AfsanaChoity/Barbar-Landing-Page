@@ -322,7 +322,7 @@ export default function App() {
 
 
       {/* core feacture setion */}
-      <section id='features' className='mt-20 md:mt-30 lg:mt-50'>
+      <section id='features' className='mt-20 md:mt-60 lg:mt-40 2xl:mt-50'>
         <CoreFeatures />
       </section>
 
