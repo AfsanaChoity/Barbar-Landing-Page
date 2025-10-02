@@ -322,9 +322,9 @@ export default function App() {
 
 
       {/* core feacture setion */}
-      {/* <section id='features' className='mt-20 md:mt-30 lg:mt-50'>
+      <section id='features' className='mt-20 md:mt-30 lg:mt-50'>
         <CoreFeatures />
-      </section> */}
+      </section>
 
       {/* 3 phones section */}
       {/* <section className=' mt-20 lg:mt-120 '>
