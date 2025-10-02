@@ -332,9 +332,9 @@ export default function App() {
       </section>
 
       {/* Map View Section */}
-      {/* <section id='map' className='container mx-auto mt-30 md:mt-40 xl:mt-80 scroll-mt-40'>
+      <section id='map' className='container mx-auto mt-30 md:mt-40 xl:mt-80 scroll-mt-40'>
         <MapView />
-      </section> */}
+      </section>
 
 
 

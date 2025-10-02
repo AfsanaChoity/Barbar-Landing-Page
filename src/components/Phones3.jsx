@@ -10,9 +10,9 @@ export default function Phones3() {
   return (
     <div className="flex justify-center items-center w-[100%]" style={{
       backgroundImage: `url("/curveBg.svg")`,
-       backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "contain",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      backgroundSize: "contain",
         
         
        
