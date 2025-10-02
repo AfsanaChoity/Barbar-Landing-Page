@@ -11,36 +11,31 @@ export default function MapView() {
       img: pin0,
       title: "Bar Bertime",
       count: "20",
-      // badgeBg: "bg-red-600",
       pos: { left: "19%", top: "4%" },
-      // size: "w-40 h-36",
+      
     },
     {
       id: 1,
       img: pin1,
       title: "Hair Salon",
       count: "10",
-      // badgeBg: "bg-green-500",
       pos: { left: "38%", top: "14%" },
-      // size: "w-30 h-27",
+     
     },
     {
       id: 2,
       img: pin2,
       title: "Skin Fade",
       count: "15",
-      // badgeBg: "bg-yellow-400",
       pos: { left: "56%", top: "4%" },
-      // size: "w-48 h-45",
+      
     },
     {
       id: 3,
       img: pin3,
       title: "Beard Trim",
       count: "12",
-      // badgeBg: "bg-sky-600",
       pos: { left: "72%", top: "10%" },
-      // size: "w-28 h-28",
     },
   ];
 
@@ -113,7 +108,7 @@ export default function MapView() {
     </div>
 
     {/* content */}
-    <div className="text-center space-y-2 md:space-y-6 px-4 xl:px-0">
+    <div className="text-center space-y-2 lg:space-y-6 px-4 xl:px-0">
           <h2 className="text-2xl lg:text-[64px] poppins-semibold">Map View</h2>
           <p className="poppins-light text-sm lg:text-[28px] xl:text-[36px] text-black/60">See Que of your barber shops so you know how busy they are in real time. </p>
           <h3 className="poppins-semibold lg:text-[36px]">NO MORE LONG QUE WAITING</h3>
