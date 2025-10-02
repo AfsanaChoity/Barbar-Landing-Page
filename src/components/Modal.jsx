@@ -58,7 +58,7 @@ export default function LogoVideoModal({
                     {/* animated modal card */}
                     <div
 
-                        className="relative  md:w-[70%] lg:max-w-2xl lv-modal-card lv-inner-shadow overflow-hidden"
+                        className="relative  md:w-[50%] lg:max-w-2xl lv-modal-card lv-inner-shadow overflow-hidden"
                     >
                         <div className="absolute z-20 top-0">
                             <img src={welcome} alt="" className="w-[357px] h-[357px]" />
@@ -93,7 +93,7 @@ export default function LogoVideoModal({
 
 
 
-                            <h2 className="urbanist-medium mb-6 text-[28px] md:text-[48px] text-center text-[#161A1A]">Welcome To</h2>
+                            <h2 className="urbanist-medium mb-6 text-[28px] lg:text-[48px] text-center text-[#161A1A]">Welcome To</h2>
 
 
                             <div className="mt-4 flex justify-center px-4 md:px-0">
@@ -110,7 +110,7 @@ export default function LogoVideoModal({
                                 </div>
                             </div>
 
-                            <h3 className="text-center urbanist-extrabold text-[28px] md:text-[48px]  mt-6 mb-4 text-[#161A1A]">Barber Time</h3>
+                            <h3 className="text-center urbanist-extrabold text-[28px] lg:text-[48px]  mt-6 mb-4 text-[#161A1A]">Barber Time</h3>
                         </div>
                     </div>
                 </div>
