@@ -327,9 +327,9 @@ export default function App() {
       </section>
 
       {/* 3 phones section */}
-      {/* <section className=' mt-20 lg:mt-120 '>
+      <section className=' mt-20 lg:mt-60 '>
         <Phones3 />
-      </section> */}
+      </section>
 
       {/* Map View Section */}
       {/* <section id='map' className='container mx-auto mt-30 md:mt-40 xl:mt-80 scroll-mt-40'>
