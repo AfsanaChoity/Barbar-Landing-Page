@@ -292,7 +292,7 @@ export default function App() {
               <img
                 src={phn3}
                 alt="phone right"
-                className='phone-enter relative top-28 2xl:top-40 -right-20 phone-delay-0 2xl:w-[560px]' />
+                className='phone-enter relative top-28 2xl:top-40 -right-20 phone-delay-0 2xl:w-[440px]' />
             </div>
   
             {/* CENTER phone — middle layer, slightly behind (arrives second) */}
@@ -300,7 +300,7 @@ export default function App() {
               <img
                 src={phn2}
                 alt="phone middle"
-                className='phone-enter relative top-14 2xl:top-20 -right-10 phone-delay-1 2xl:w-[560px]' />
+                className='phone-enter relative top-14 2xl:top-20 -right-10 phone-delay-1 2xl:w-[440px]' />
             </div>
 
             {/* LEFT phone — back layer, more tilt (arrives first from bottom) */}
@@ -308,7 +308,7 @@ export default function App() {
               <img
                 src={phn1}
                 alt="phone left" 
-                className='phone-enter relative top-0 right-0  phone-delay-2 2xl:w-[560px]' />
+                className='phone-enter relative top-0 right-0  phone-delay-2 2xl:w-[440px]' />
             </div>
 
           </div>
