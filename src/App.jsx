@@ -410,9 +410,9 @@ export default function App() {
 
 
       {/* footer */}
-      {/* <section id='stay-with-us' className='mt-4 md:mt-20'>
+      <section id='stay-with-us' className='mt-4 md:mt-20'>
         <Footer />
-      </section> */}
+      </section>
 
       {/* render the controlled modal once, near root */}
       <LogoVideoModal
