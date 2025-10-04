@@ -3,8 +3,8 @@ import image from "../assets/images/client.png";
 import map from "../assets/images/map.png";
 import { IoIosSearch } from "react-icons/io";
 
-// import phn1 from "../assets/images/client/phn1.svg";
-import phn1 from "../assets/images/client/phn1.png";
+import phn1 from "../assets/images/client/phn1.svg";
+// import phn1 from "../assets/images/client/phn1.png";
 import phn2 from "../assets/images/client/phn2.svg";
 import phn3 from '../assets/svg/phone2.svg'
 import phn4 from "../assets/images/client/phn4.svg";
