@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import barber from "../assets/images/barber.svg";
 import phn1 from "../assets/images/smallPhn.svg";
 import phn2 from "../assets/images/smallPhn1.svg";
+import LeftPhones from "./shared/LeftPhones";
 
 
 export default function BuiltByBarber() {
@@ -29,173 +30,44 @@ export default function BuiltByBarber() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="  ">
-      <style>{`
-        .phone-size { width: 180px; height: auto; display: block; }
+    <section ref={sectionRef} className="">
 
-        /* --- Entrance animations (SLOWER now) --- */
-
-        @keyframes enterFromBottom {
-          0%   { transform: translateY(420px) scale(0.88) rotate(10deg); opacity: 0; }
-          55%  { transform: translateY(-36px) scale(1.16) rotate(-6deg); opacity: 1; }
-          78%  { transform: translateY(18px) scale(1.06) rotate(3deg); }
-          92%  { transform: translateY(-8px) scale(1.02) rotate(-2deg); }
-          100% { transform: translateY(0) scale(1) rotate(0); }
-        }
-
-        @keyframes enterFromTop {
-          0%   { transform: translateY(-460px) scale(0.88) rotate(-10deg); opacity: 0; }
-          48%  { transform: translateY(46px) scale(1.18) rotate(8deg); opacity: 1; }
-          72%  { transform: translateY(-20px) scale(1.08) rotate(-3deg); }
-          90%  { transform: translateY(10px) scale(1.03) rotate(2deg); }
-          100% { transform: translateY(-18px) scale(1) rotate(0); } /* final: slightly up */
-        }
-
-        /* longer idle breathing */
-        @keyframes slowBreathFront {
-          0%   { transform: translateY(0) scale(1); }
-          50%  { transform: translateY(-12px) scale(1.01); }
-          100% { transform: translateY(0) scale(1); }
-        }
-        @keyframes slowBreathBack {
-          0%   { transform: translateY(-18px) scale(1); }
-          50%  { transform: translateY(-30px) scale(1.01); }
-          100% { transform: translateY(-18px) scale(1); }
-        }
-
-        @keyframes shineSweep {
-          0% { transform: translateX(-140%) skewX(-10deg); opacity: 0; }
-          30% { opacity: 0.6; }
-          55% { transform: translateX(110%) skewX(-10deg); opacity: 0.95; }
-          85% { opacity: 0.45; }
-          100% { transform: translateX(220%) skewX(-10deg); opacity: 0; }
-        }
-
-        /* default: no animation until section gets .in-view */
-        .phone-front, .phone-back {
-          animation: none;
-          will-change: transform, opacity;
-          border-radius: 14px;
-          overflow: hidden;
-        }
-
-        /* When section is visible: play entrance (back first), then long idle breathing */
-        .in-view .phone-back {
-          animation:
-            enterFromTop 3000ms cubic-bezier(.2,.9,.25,1) 0ms both,
-            slowBreathBack 10s ease-in-out 2600ms infinite;
-          
-          transform-origin: center;
-        }
-
-        .in-view .phone-front {
-          animation:
-            enterFromBottom 2600ms cubic-bezier(.25,.95,.22,1) 500ms both,
-            slowBreathFront 9.5s ease-in-out 3000ms infinite;
-         
-          transform-origin: center;
-        }
-
-        .shine {
-          position: absolute;
-          inset: 0;
-          pointer-events: none;
-          mix-blend-mode: screen;
-          background: linear-gradient(110deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 28%, rgba(255,255,255,0.20) 42%, rgba(255,255,255,0) 70%);
-          transform: translateX(-140%) skewX(-10deg);
-          animation: shineSweep 2.6s linear 900ms infinite;
-        }
-
-        .halo {
-          position: absolute;
-          left: 50%;
-          top: 98%;
-          width: 84%;
-          height: 26%;
-          transform: translateX(-50%);
-          background: radial-gradient(closest-side, rgba(231,140,100,0.16), rgba(231,140,100,0.06) 40%, rgba(0,0,0,0) 70%);
-          filter: blur(10px);
-          z-index: -10;
-          border-radius: 999px;
-        }
-
-        .phone-front:hover, .phone-back:hover {
-          animation-play-state: paused;
-          cursor: pointer;
-        }
-        .phone-front:hover .shine, .phone-back:hover .shine { animation-play-state: paused; }
-
-        @media (max-width: 640px) {
-          .phone-size { width: 150px; }
-          .shine { display: none; }
-          @keyframes enterFromBottom { 0% { transform: translateY(320px) scale(0.90); } }
-          @keyframes enterFromTop { 0% { transform: translateY(-320px) scale(0.90); } }
-        }
-
-        @keyframes fadeSlideUp { 0% { opacity:0; transform: translateY(8px);} 100% { opacity:1; transform: translateY(0);} }
-        .reveal { animation: fadeSlideUp 700ms ease forwards; opacity: 0; }
-      `}</style>
-
-
-
-
-      {/* top */}
       <div className="flex items-baseline mb-10 justify-center">
-            <img src={barber} alt="barber icon" className="w-[160px] h-[182px] " />
-            <h4 className="poppins-semibold text-2xl md:text-3xl xl:text-[55px] -ml-6  transfrom -translate-y-1">Services</h4>
+            <img src={barber} alt="barber icon" className="w-[160px] h-[182px]" />
+            <h4 className="poppins-semibold text-2xl md:text-3xl xl:text-[55px] -ml-6 relative -top-0.5">Services</h4>
           </div>
 
 
       <div className=" flex flex-col-reverse md:flex-row md:justify-between md:items-center ">
         
         {/* Left: phones */}
-        <div className="relative mt-10 md:mt-0 flex gap-3 md:gap-5 justify-center  items-center " style={{ minHeight: 320 }}>
-          <div className="absolute top-26 md:-left-6  w-[280px] h-[200px] md:w-[322px] md:h-[214px] rounded-tl-[132px] rounded-bl-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
-
-          {/* FRONT phone (comes from bottom) */}
-          <div className="ml-4 md:mt-10 w-[114px]" >
-            <div className="phone-front" style={{ position: "relative", borderRadius: 14 }}>
-              <img src={phn2} alt="app preview phone 1" className="w-[114px] h-[242px] " />
-              <div className="shine" />
-              <div className="halo" />
-            </div>
-          </div>
-
-          {/* BACK phone (comes from top) */}
-          <div className=" w-[114px] mb-10 md:mb-0" >
-            <div className="phone-back" style={{ position: "relative", borderRadius: 14 }}>
-              <img src={phn1} alt="app preview phone 2" className="w-[114px] h-[242px]" />
-              <div className="shine" />
-              <div className="halo" />
-            </div>
-          </div>
-        </div>
+        <LeftPhones phn1={phn1} phn2={phn2}/>
 
         {/* Right: content */}
-        <div className="w-[100%]  md:w-[60%] ">
+        <div className="w-[100%]  md:w-[50%] lg:w-[60%] ">
           
 
           <h2 className="reveal poppins-semibold text-3xl lg:text-[56px] 2xl:text-[96px] leading-tight  mb-4" style={{ animationDelay: "0.05s" }}>
             Built by a <span className="text-[#A63F0B]">Barber</span>,  for everyone
           </h2>
 
-          <p className="reveal poppins-light text-sm leading-6 md:text-[24px] mb-6  md:leading-13" style={{ animationDelay: "0.12s" }}>
+          <p className="reveal poppins-light text-sm leading-6 lg:text-[24px] mb-6  lg:leading-13" style={{ animationDelay: "0.12s" }}>
             Save time with <span className="poppins-semibold">accurate wait</span> times and <span className="poppins-semibold">instant booking</span>. Feel confident by <span className="poppins-semibold">browsing real work, profiles, </span> and <span className="poppins-semibold">ratings</span>. Keep things running smoothly with <span className="poppins-semibold">live queue</span> visibility that helps shops flow better.
           </p>
 
           <div className="reveal mb-8" style={{ animationDelay: "0.18s" }}>
-            <div className="inline-block w-full  rounded-[20px] border border-[#6F6F6F] shadow-lg px-6 py-6 bg-white text-center">
-              <span className="poppins-semibold md:text-[28px]">Accurate wait <span className="poppins-light">times & </span> instant booking</span>
+            <div className="inline-block w-full  rounded-[20px] border border-[#6F6F6F] shadow-lg px-6 py-6 bg-white md:text-center">
+              <span className="poppins-semibold lg:text-[28px]">Accurate wait <span className="poppins-light">times & </span> instant booking</span>
             </div>
           </div>
 
           <div className="reveal grid grid-cols-1 md:grid-cols-2 gap-4 mt-4" style={{ animationDelay: "0.24s" }}>
             <div className="rounded-[20px] bg-white border border-[#666666] shadow-lg p-6">
-             <p className="poppins-semibold md:text-[28px] md:leading-16">Profiles, ratings, <span className="poppins-light">and</span> real work previews</p>
+             <p className="poppins-semibold lg:text-[28px] lg:leading-16">Profiles, ratings, <span className="poppins-light">and</span> real work previews</p>
             </div>
 
             <div className="rounded-[20px] bg-white border border-[#666666] shadow-lg p-6">
-              <p className="poppins-light md:text-[28px] md:leading-16">
+              <p className="poppins-light lg:text-[28px] lg:leading-16">
                 <span className="poppins-semibold">Live queue</span> visibility for smoother shop flow
               </p>
             </div>

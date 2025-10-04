@@ -82,18 +82,16 @@ export default function App() {
             // When hero enters view: restart animation
             phones.forEach((p) => {
               p.classList.remove('phone-enter');
-              // force reflow so animation can restart reliably
-              // eslint-disable-next-line no-unused-expressions
               p.offsetWidth;
               p.classList.add('phone-enter');
             });
           } else {
-            // Remove animation classes when leaving so it will replay next time
+            
             phones.forEach((p) => p.classList.remove('phone-enter'));
           }
         });
       },
-      { threshold: 0.3 } // trigger when ~30% of hero is visible — tweak if you want
+      { threshold: 0.3 } 
     );
 
     if (heroRef.current) observer.observe(heroRef.current);
@@ -292,7 +290,7 @@ export default function App() {
               <img
                 src={phn3}
                 alt="phone right"
-                className='phone-enter relative top-28 2xl:top-40 -right-20 phone-delay-0 2xl:w-[440px]' />
+                className='phone relative top-28 2xl:top-40 -right-20 phone-delay-0 2xl:w-[440px]' />
             </div>
   
             {/* CENTER phone — middle layer, slightly behind (arrives second) */}
@@ -300,7 +298,7 @@ export default function App() {
               <img
                 src={phn2}
                 alt="phone middle"
-                className='phone-enter relative top-14 2xl:top-20 -right-10 phone-delay-1 2xl:w-[440px]' />
+                className='phone  relative top-14 2xl:top-20 -right-10 phone-delay-1 2xl:w-[440px]' />
             </div>
 
             {/* LEFT phone — back layer, more tilt (arrives first from bottom) */}
@@ -308,7 +306,7 @@ export default function App() {
               <img
                 src={phn1}
                 alt="phone left" 
-                className='phone-enter relative top-0 right-0  phone-delay-2 2xl:w-[440px]' />
+                className='phone  relative top-0 right-0  phone-delay-2 2xl:w-[440px]' />
             </div>
 
           </div>
@@ -349,68 +347,68 @@ export default function App() {
       </section>
 
       {/* About Clients Section */}
-      {/* <section className='container mx-auto md:mt-50 px-4 xl:px-0'>
+      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 xl:px-0'>
         <AboutClients />
-      </section> */}
+      </section>
 
       {/* About barber Section */}
-      {/* <section className='container mx-auto mt-10 md:mt-50 px-4 xl:px-0'>
+      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 xl:px-0'>
         <AboutBarber />
-      </section> */}
+      </section>
 
       {/* About Owner Section */}
-      {/* <section className='container mx-auto mt-10 md:mt-50 px-4 xl:px-0'>
+      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 xl:px-0'>
         <Owner />
-      </section> */}
+      </section>
 
       {/* Build By Barber */}
-      {/* <section id='services' className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section id='services' className='container mx-auto mt-10 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
         <BuiltByBarber />
-      </section> */}
+      </section>
 
       {/* Hire barber */}
-      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
         <HireBarber />
-      </section> */}
+      </section>
 
       {/* Book Your haircut  */}
-      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
         <BookHaircut />
-      </section> */}
+      </section>
 
       {/* Effortless Shop */}
-      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
         <EffortlessShop />
-      </section> */}
+      </section>
 
       {/* Simple & transparent Payment */}
-      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
         <SimplePayment />
-      </section> */}
+      </section>
 
       {/* Live Location */}
-      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
         <LiveLocation />
-      </section> */}
+      </section>
 
       {/* Call Chat */}
-      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
         <CallChat />
-      </section> */}
+      </section>
 
       {/* See what’s Trending - */}
-      {/* <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
         <SeeTranding />
-      </section> */}
+      </section>
 
       {/* Meet Founders Section */}
-      {/* <section id='founders' className='container mx-auto md:mt-20 px-4 xl:px-0'>
+      <section id='founders' className='container mx-auto mt-10 md:mt-20 px-4 xl:px-0'>
         <MeetFounders />
-      </section> */}
+      </section>
 
 
       {/* footer */}
-      <section id='stay-with-us' className='mt-4 md:mt-20'>
+      <section id='stay-with-us' className='mt-10 md:mt-20'>
         <Footer />
       </section>
 

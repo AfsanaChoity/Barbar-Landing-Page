@@ -1,4 +1,4 @@
-import React from 'react'
+import "../../styles/smallPhnAnimation.css"
 
 export default function LeftPhones({phn1, phn2}) {
   return (

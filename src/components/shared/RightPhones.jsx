@@ -1,4 +1,4 @@
-import React from 'react'
+import "../../styles/smallPhnAnimation.css"
 
 export default function RightPhones({ phn1, phn2 }) {
     return (

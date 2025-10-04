@@ -1,0 +1,110 @@
+.phone-size {  height: auto; display: block; }
+
+        /* --- Entrance animations (SLOWER now) --- */
+
+        @keyframes enterFromBottom {
+          0%   { transform: translateY(420px)  rotate(10deg); opacity: 0; }
+          55%  { transform: translateY(-36px)  rotate(-6deg); opacity: 1; }
+          78%  { transform: translateY(18px)  rotate(3deg); }
+          92%  { transform: translateY(-8px)  rotate(-2deg); }
+          100% { transform: translateY(0)  rotate(0); }
+        }
+
+        @keyframes enterFromTop {
+          0%   { transform: translateY(-460px)  rotate(-10deg); opacity: 0; }
+          48%  { transform: translateY(46px)  rotate(8deg); opacity: 1; }
+          72%  { transform: translateY(-20px)  rotate(-3deg); }
+          90%  { transform: translateY(10px)  rotate(2deg); }
+          100% { transform: translateY(-18px)  rotate(0); } /* final: slightly up */
+        }
+
+        /* longer idle breathing */
+        @keyframes slowBreathFront {
+          0%   { transform: translateY(0) ; }
+          50%  { transform: translateY(-12px) ; }
+          100% { transform: translateY(0) ; }
+        }
+        @keyframes slowBreathBack {
+          0%   { transform: translateY(-18px) ; }
+          50%  { transform: translateY(-30px) ; }
+          100% { transform: translateY(-18px) ; }
+        }
+
+        @keyframes shineSweep {
+          0% { transform: translateX(-140%) skewX(-10deg); opacity: 0; }
+          30% { opacity: 0.6; }
+          55% { transform: translateX(110%) skewX(-10deg); opacity: 0.95; }
+          85% { opacity: 0.45; }
+          100% { transform: translateX(220%) skewX(-10deg); opacity: 0; }
+        }
+
+        /* default: no animation until section gets .in-view */
+        .phone-front, .phone-back {
+          animation: none;
+          will-change: transform, opacity;
+          border-radius: 14px;
+          overflow: hidden;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+          transform: translateZ(0);
+          image-rendering: -webkit-optimize-contrast;
+          image-rendering: crisp-edges;
+        }
+
+        /* When section is visible: play entrance (back first), then long idle breathing */
+        .in-view .phone-back {
+          animation:
+            enterFromTop 3000ms cubic-bezier(.2,.9,.25,1) 0ms both,
+            slowBreathBack 10s ease-in-out 2600ms infinite;
+          
+          transform-origin: center;
+        }
+
+        .in-view .phone-front {
+          animation:
+            enterFromBottom 2600ms cubic-bezier(.25,.95,.22,1) 500ms both,
+            slowBreathFront 9.5s ease-in-out 3000ms infinite;
+         
+          transform-origin: center;
+        }
+
+        .shine {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          mix-blend-mode: screen;
+          background: linear-gradient(110deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 28%, rgba(255,255,255,0.20) 42%, rgba(255,255,255,0) 70%);
+          transform: translateX(-140%) skewX(-10deg);
+          animation: shineSweep 2.6s linear 900ms infinite;
+        }
+
+        .halo {
+          position: absolute;
+          left: 50%;
+          top: 98%;
+          width: 84%;
+          height: 26%;
+          transform: translateX(-50%);
+          background: radial-gradient(closest-side, rgba(231,140,100,0.16), rgba(231,140,100,0.06) 40%, rgba(0,0,0,0) 70%);
+          /* filter: blur(10px); */
+          z-index: -10;
+          border-radius: 999px;
+        }
+
+        .phone-front:hover, .phone-back:hover {
+          animation-play-state: paused;
+          cursor: pointer;
+        }
+        .phone-front:hover .shine, .phone-back:hover .shine { animation-play-state: paused; }
+
+        @media (max-width: 640px) {
+          .phone-size { width: 150px; }
+          .shine { display: none; }
+          @keyframes enterFromBottom { 0% { transform: translateY(320px) ; } }
+          @keyframes enterFromTop { 0% { transform: translateY(-320px) ; } }
+        }
+
+        @keyframes fadeSlideUp { 0% { opacity:0; transform: translateY(8px);} 100% { opacity:1; transform: translateY(0);} }
+        .reveal { animation: fadeSlideUp 700ms ease forwards; opacity: 0; }

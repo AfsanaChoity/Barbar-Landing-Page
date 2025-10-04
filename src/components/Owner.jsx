@@ -13,6 +13,7 @@ import phn5 from "../assets/images/owner/phn5.svg";
 import phn6 from "../assets/images/owner/dashboard.png";
 
 import ScrollingPhones from "./ScrollingPhones";
+import About from "./shared/About";
 
 
 const items = [
@@ -53,28 +54,23 @@ export default function Owner() {
             <div className="flex flex-col md:flex-row items-center gap-20">
 
                 {/* Text Section */}
-                <div className=" text-center ">
-                    <h2 className="text-2xl md:text-[44px] xl:text-[64px] poppins-bold mb-8">ABOUT OWNER</h2>
-                    {/* <p className="poppins-light text-xl md:text-3xl xl:text-[38px] my-4">Get found where clients search - Google, Instagram</p> */}
-                    <p className="poppins-light text-xl md:text-3xl xl:text-[38px] my-4"> Find out what the owners can do in the app</p>
-                    <div className="flex justify-center mt-6">
-                        <button onClick={handleGetFoundClick} className="cursor-pointer flex items-center gap-2 border poppins-regular md:text-[20px]  py-[14px] px-[26px] rounded-lg">
-                             More Info <img src={arrow} alt="" className="w-8 md:w-10" />
-                        </button>
-                    </div>
+
+
+                <div>
+                    <About heading="ABOUT OWNER" subheading="Find out what the owners can do in the app" onButtonClick={handleGetFoundClick} />
                 </div>
 
                 {/* Image Section */}
                 <div className="">
                     {/* Background Div */}
-                    <div className=" bg-[#E9874E] rounded-[20px]  h-[180px] md:w-[617px] md:h-[386px] mt-10 md:mt-0">
+                    <div className=" bg-[#E9874E] rounded-[20px]  h-[180px] xl:w-[617px] xl:h-[386px] mt-10 md:mt-0">
 
                         {/* Image Above the Background Div */}
                         <div className=" z-20 ml-10  transform -translate-y-16 md:-translate-y-16">
                             <img
                                 src={image}
                                 alt="Client Barber"
-                                className="w-[250px] h-[200px] md:w-[472px] md:h-[281px] rounded-[20px] object-cover"
+                                className="w-[250px] h-[200px] xl:w-[472px] xl:h-[281px] rounded-[20px] object-cover"
                             />
                         </div>
 
@@ -89,7 +85,7 @@ export default function Owner() {
                                 <img
                                     src={map}
                                     alt="map"
-                                    className=" h-[200px] md:w-[318px] md:h-[460px] rounded-[20px] "
+                                    className=" h-[200px] xl:w-[318px] xl:h-[460px] rounded-[20px] "
                                 />
                             </div>
                         </div>
@@ -105,7 +101,7 @@ export default function Owner() {
             </div>
 
             {/* Scrolling phones */}
-            <div className="mt-20 md:mt-60" id="scrolling-phones" ref={phonesRef}>
+            <div className="mt-20 md:mt-30 xl:mt-50" id="scrolling-phones" ref={phonesRef}>
                 <ScrollingPhones items={items} text="OWNER" />
             </div>
         </div>
