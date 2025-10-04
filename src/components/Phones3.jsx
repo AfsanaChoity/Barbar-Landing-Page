@@ -19,7 +19,7 @@ export default function Phones3() {
     }}>
 
       {/* Phones */}
-      <div className="container mx-auto  relative px-[8%] md:px-4 xl:px-0 flex justify-between  ">
+      <div className="container mx-auto  relative px-[8%] md:px-4 2xl:px-0 flex justify-between  ">
 
         {/* Left Phone */}
         

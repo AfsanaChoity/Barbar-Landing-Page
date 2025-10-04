@@ -12,7 +12,7 @@ export default function Footer() {
       className="w-full bg-[#F8C0A3] py-8 md:py-14 lg:py-20 "
 
     >
-      <div className="container mx-auto  px-4 xl:px-0 grid grid-cols-1 md:grid-cols-5 md:gap-[4%] lg:gap-20">
+      <div className="container mx-auto  px-4 2xl:px-0 grid grid-cols-1 md:grid-cols-5 md:gap-[4%] lg:gap-20">
         {/* LEFT COLUMN */}
         <div className=" col-span-1 ">
           {/* logo must be provided via prop */}

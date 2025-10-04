@@ -69,8 +69,8 @@ export default function Owner() {
                         <div className=" z-20 ml-10  transform -translate-y-16 md:-translate-y-16">
                             <img
                                 src={image}
-                                alt="Client Barber"
-                                className="w-[250px] h-[200px] xl:w-[472px] xl:h-[281px] rounded-[20px] object-cover"
+                                alt="OWner"
+                                className="w-[250px] h-[160px] xl:w-[472px] xl:h-[281px] rounded-[20px] object-cover"
                             />
                         </div>
 

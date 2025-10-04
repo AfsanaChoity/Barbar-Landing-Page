@@ -108,7 +108,7 @@ export default function MapView() {
     </div>
 
     {/* content */}
-    <div className="text-center space-y-2 lg:space-y-6 px-4 xl:px-0">
+    <div className="text-center space-y-2 lg:space-y-6 px-4 2xl:px-0">
           <h2 className="text-2xl lg:text-[64px] poppins-semibold">Map View</h2>
           <p className="poppins-light text-sm lg:text-[28px] xl:text-[36px] text-black/60">See Que of your barber shops so you know how busy they are in real time. </p>
           <h3 className="poppins-semibold lg:text-[36px]">NO MORE LONG QUE WAITING</h3>

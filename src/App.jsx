@@ -109,8 +109,8 @@ export default function App() {
 
         {/* bg images */}
         <div className='w-full '>
-          <img src={vector8} alt="bg1" className="absolute inset-0 w-full object-cover pointer-events-none z-10 h-[820px] lg:h-full  " />
-          <img src={vector9} alt="bg2" className="absolute inset-0 w-full object-cover pointer-events-none z-0  h-[920px] lg:h-full mt-[38px] lg:mt-[150px]  xl:mt-[117px] 2xl:mt-[97px]"
+          <img src={vector8} alt="bg1" className="absolute inset-0 w-full object-cover pointer-events-none z-10 h-[820px] md:h-[620px]   " />
+          <img src={vector9} alt="bg2" className="absolute inset-0 w-full object-cover pointer-events-none z-0  h-[920px] md:h-[720px]   mt-[38px] lg:mt-[130px]  xl:mt-[100px] 2xl:mt-[77px]"
           />
         </div>
 
@@ -195,7 +195,7 @@ export default function App() {
 
         {/* Content+ image */}
 
-        <div className='container mx-auto -mt-10 px-4 lg:px-10 xl:px-0 flex flex-col md:flex-row  lg:justify-between'>
+        <div className='container mx-auto -mt-10 px-4 lg:px-10 2xl:px-0 flex flex-col md:flex-row  lg:justify-between'>
 
           {/* content */}
           <div className='relative  z-30  '>
@@ -320,7 +320,7 @@ export default function App() {
 
 
       {/* core feacture setion */}
-      <section id='features' className='mt-20 md:mt-60 lg:mt-70 2xl:mt-60'>
+      <section id='features' className='mt-20 md:mt-40  2xl:mt-60'>
         <CoreFeatures />
       </section>
 
@@ -337,72 +337,72 @@ export default function App() {
 
 
       {/* Meet Section */}
-      <section className='container mx-auto mt-16 lg:mt-30 px-4 xl:px-0'>
+      <section className='container mx-auto mt-16 lg:mt-30 px-4 2xl:px-0'>
         <MeetAskRey />
       </section>
 
       {/* Smarter Queues Section */}
-      <section className='container mx-auto  px-4 xl:px-0 mt-26 md:mt-16'>
+      <section className='container mx-auto  px-4 2xl:px-0 mt-26 md:mt-16'>
         <SmarterQueues />
       </section>
 
       {/* About Clients Section */}
-      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 xl:px-0'>
+      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 2xl:px-0'>
         <AboutClients />
       </section>
 
       {/* About barber Section */}
-      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 xl:px-0'>
+      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 2xl:px-0'>
         <AboutBarber />
       </section>
 
       {/* About Owner Section */}
-      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 xl:px-0'>
+      <section className='container mx-auto mt-10 md:mt-30 xl:mt-50 px-4 2xl:px-0'>
         <Owner />
       </section>
 
       {/* Build By Barber */}
-      <section id='services' className='container mx-auto mt-10 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
+      <section id='services' className='container mx-auto mt-10 md:mt-20 lg:mt-24  px-4 md:px-8 2xl:px-0'>
         <BuiltByBarber />
       </section>
 
       {/* Hire barber */}
-      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 2xl:px-0'>
         <HireBarber />
       </section>
 
       {/* Book Your haircut  */}
-      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 2xl:px-0'>
         <BookHaircut />
       </section>
 
       {/* Effortless Shop */}
-      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 2xl:px-0'>
         <EffortlessShop />
       </section>
 
       {/* Simple & transparent Payment */}
-      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 2xl:px-0'>
         <SimplePayment />
       </section>
 
       {/* Live Location */}
-      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 2xl:px-0'>
         <LiveLocation />
       </section>
 
       {/* Call Chat */}
-      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-20 lg:mt-24  px-4 md:px-8 2xl:px-0'>
         <CallChat />
       </section>
 
       {/* See what’s Trending - */}
-      <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 xl:px-0'>
+      <section className='container mx-auto mt-14 md:mt-24 px-4 md:px-8 2xl:px-0'>
         <SeeTranding />
       </section>
 
       {/* Meet Founders Section */}
-      <section id='founders' className='container mx-auto mt-10 md:mt-20 px-4 xl:px-0'>
+      <section id='founders' className='container mx-auto mt-10 md:mt-20 px-4 2xl:px-0'>
         <MeetFounders />
       </section>
 
