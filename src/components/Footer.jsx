@@ -80,7 +80,7 @@ export default function Footer() {
                 aria-label="Your email"
                 type="email"
                 placeholder="Your email"
-                className="rounded-md pl-2 py-1 lg:px-4 lg:py-3 shadow-sm border border-transparent focus:outline-none text-[14px] lg:text-[16px] bg-white"
+                className="rounded-md pl-2 py-1 xl:px-4 lg:py-3 shadow-sm border border-transparent focus:outline-none text-[14px] lg:text-[16px] bg-white"
               />
               <button
                 type="submit"
@@ -91,7 +91,7 @@ export default function Footer() {
             </form>
           </div>
 
-          <div className="mt-14">
+          <div className="mt-8 lg:mt-14">
             <h3 className="caladea-bold text-2xl lg:text-[36px]  text-[#030605]">Join the Waitlist</h3>
             <div className="mt-4 flex flex-wrap gap-4">
               {/* App Store Button */}
