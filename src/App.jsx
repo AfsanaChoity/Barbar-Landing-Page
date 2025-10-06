@@ -1,12 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import logo from './assets/logo.svg';
+import logo from './assets/logo.png';
 import vector8 from './assets/svg/Vector8.svg'
 import vector9 from './assets/svg/Vector9.svg'
 import playstore from './assets/svg/playstore.svg'
 import apple from './assets/svg/apple.svg'
-import phn1 from './assets/svg/phone1.svg'
-import phn2 from './assets/svg/phone2.svg'
-import phn3 from './assets/svg/phone3.svg'
+// import phn1 from './assets/svg/phone1.svg'
+// import phn2 from './assets/svg/phone2.svg'
+// import phn3 from './assets/svg/phone3.svg'
+import phn1 from './assets/svg/phone1.png'
+import phn2 from './assets/svg/phone2.png'
+import phn3 from './assets/svg/phone3.png'
+
 import CoreFeatures from './components/CoreFeatures';
 import Phones3 from './components/Phones3';
 import MeetAskRey from './components/MeetAskRey';
@@ -122,7 +126,7 @@ export default function App() {
                 className='cursor-pointer'
               >
                 
-                <img src={logo} alt="logo" className='' />
+                <img src={logo} alt="logo" className='w-[107px]' />
               </button>
             </div>
 
@@ -286,9 +290,9 @@ export default function App() {
             {/* RIGHT phone — front/top layer (arrives last) */}
             <div>
               <img
-                src={phn3}
+                src={phn1}
                 alt="phone right"
-                className='phone relative top-28 2xl:top-40 -right-20 phone-delay-0 2xl:w-[440px]' />
+                className='phone relative top-28 2xl:top-40 -right-20 phone-delay-0 lg:w-[260px] xl:w-[300px] 2xl:w-[440px] ' />
             </div>
   
             {/* CENTER phone — middle layer, slightly behind (arrives second) */}
@@ -296,15 +300,15 @@ export default function App() {
               <img
                 src={phn2}
                 alt="phone middle"
-                className='phone  relative top-14 2xl:top-20 -right-10 phone-delay-1 2xl:w-[440px]' />
+                className='phone  relative top-14 2xl:top-20 -right-10 phone-delay-1 lg:w-[260px] xl:w-[300px] 2xl:w-[440px]' />
             </div>
 
             {/* LEFT phone — back layer, more tilt (arrives first from bottom) */}
             <div>
               <img
-                src={phn1}
+                src={phn3}
                 alt="phone left" 
-                className='phone  relative top-0 right-0  phone-delay-2 2xl:w-[440px]' />
+                className='phone  relative top-0 right-0  phone-delay-2 lg:w-[260px] xl:w-[300px] 2xl:w-[440px] ' />
             </div>
 
           </div>
