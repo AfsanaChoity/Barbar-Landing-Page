@@ -15,7 +15,6 @@ export default function Footer() {
       <div className="container mx-auto  px-4 2xl:px-0 grid grid-cols-1 md:grid-cols-5 md:gap-[4%] lg:gap-20">
         {/* LEFT COLUMN */}
         <div className=" col-span-1 ">
-          {/* logo must be provided via prop */}
           <div className="items-start">
             <button
             onClick={() => setOpen(true)}

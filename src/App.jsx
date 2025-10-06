@@ -30,8 +30,6 @@ import LogoVideoModal2 from './components/Modal2';
 import { TfiAlignJustify } from "react-icons/tfi";
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
-import phoneframe from "./assets/svg/Phone_Mockup.svg";
-import phoneframe2 from "./assets/Hiring.png";
 import { Button, Input } from 'antd';
 
 
@@ -123,13 +121,13 @@ export default function App() {
                 onClick={() => setOpen(true)}
                 className='cursor-pointer'
               >
-                {/* <img src={logo} alt="logo" className='h-[209px] w-[96px]' /> */}
+                
                 <img src={logo} alt="logo" className='' />
               </button>
             </div>
 
             {/* content */}
-            <div className=' flex justify-between items-center w-full transform -translate-y-18 lg:-translate-y-8 z-20'> {/* Shift items up */}
+            <div className=' flex justify-between items-center w-full transform -translate-y-18 lg:-translate-y-8 z-20'> 
 
               {/* shop name */}
               <div className='flex-1 md:flex-none   '>
