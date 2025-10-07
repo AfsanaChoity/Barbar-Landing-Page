@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import phn1 from "../assets/images/smallPhn8.svg";
-import phn2 from "../assets/images/smallPhn7.svg";
+import phn1 from "../assets/images/smallPhn8.png";
+import phn2 from "../assets/images/smallPhn7.png";
 import RightPhones from "./shared/RightPhones";
 
 export default function EffortlessShop() {

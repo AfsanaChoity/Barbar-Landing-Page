@@ -1,16 +1,11 @@
 import React, { useRef } from "react";
 import image from "../assets/images/barber/Barber.png";
-import map from "../assets/images/barber/BarberPhn.svg";
-import arrow from "../assets/svg/rightArrow.svg"
-import { IoIosSearch } from "react-icons/io";
-
-import phn1 from "../assets/images/barber/phn1.svg";
-
-import phn2 from "../assets/images/barber/phn2.svg";
-
-import phn3 from "../assets/images/barber/phn3.svg";
-import phn4 from "../assets/images/barber/phn4.svg";
-import phn5 from "../assets/images/barber/phn5.svg";
+import map from "../assets/images/barber/BarberPhn.png";
+import phn1 from "../assets/images/barber/phn1.png";
+import phn2 from "../assets/images/barber/phn2.png";
+import phn3 from "../assets/images/barber/phn3.png";
+import phn4 from "../assets/images/barber/phn4.png";
+import phn5 from "../assets/images/barber/phn5.png";
 import ScrollingPhones from "./ScrollingPhones";
 import About from "./shared/About";
 
@@ -58,7 +53,7 @@ export default function AboutBarber() {
                         </div>
 
                         {/* Map Image at the Right Side */}
-                        <div className=" ml-14 md:ml-[40%] transform -translate-y-36 md:-translate-y-46  ">
+                        <div className=" ml-14 md:ml-[40%] transform -translate-y-36 lg:-translate-y-46  ">
                             <div className="mb-4">
                                 
 
@@ -68,7 +63,7 @@ export default function AboutBarber() {
                                 <img
                                     src={map}
                                     alt="map"
-                                    className=" h-[200px] xl:w-[318px] xl:h-[460px] rounded-[20px] "
+                                    className=" h-[200px] xl:w-[238px] xl:h-[460px] rounded-[20px] "
                                 />
                             </div>
                         </div>

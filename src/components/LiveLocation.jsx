@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import phn1 from "../assets/images/smallPhn14.svg";
-import phn2 from "../assets/images/smallPhn13.svg";
+import phn1 from "../assets/images/smallPhn12.png";
+import phn2 from "../assets/images/smallPhn11.png";
 import RightPhones from "./shared/RightPhones";
 
 export default function LiveLocation() {
@@ -80,52 +80,6 @@ export default function LiveLocation() {
         {/* Right: phones */}
         <RightPhones phn1={phn1} phn2={phn2}/>
 
-        {/* <div
-          className="relative flex justify-center md:justify-start items-center"
-          style={{ minHeight: 320 }}
-        >
-          <div className="absolute top-40 md:-left-6 md:top-8 w-[280px] h-[200px] md:w-[322px] md:h-[214px] rounded-tl-[132px] rounded-bl-[132px] rounded-br-[132px] bg-[#E9874E] opacity-90 shadow-2xl -z-10  shadow-gray-600" />
-
-          {/* FRONT phone (comes from bottom) */}
-          {/* <div
-            className="relative z-10 -ml-28 md:ml-[18px] top-14 md:-top-[44px] w-[114px]"
-          >
-            <div
-              className="phone-front"
-              style={{ position: "relative", borderRadius: 14 }}
-            >
-              <img
-                src={phn2}
-                alt="app preview phone 1"
-                className="w-[114px] h-[242px] "
-              />
-              <div className="shine" />
-              <div className="halo" />
-            </div>
-          </div> */}
-
-          {/* BACK phone (comes from top) */}
-          {/* <div
-           className="absolute z-0 right-4 md:-right-[132px] top-14 md:-top-[14px] w-[114px]"
-          >
-            <div
-              className="phone-back"
-              style={{
-                position: "relative",
-                borderRadius: 14,
-                transform: "scale(0.96)",
-              }}
-            >
-              <img
-                src={phn1}
-                alt="app preview phone 2"
-                className="w-[114px] h-[242px]"
-              />
-              <div className="shine" />
-              <div className="halo" />
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

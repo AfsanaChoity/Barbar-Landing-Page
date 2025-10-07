@@ -3,13 +3,13 @@ import image from "../assets/images/client.png";
 import map from "../assets/images/map.png";
 import { IoIosSearch } from "react-icons/io";
 
-import phn1 from "../assets/images/client/phn1.svg";
-import phn2 from "../assets/images/client/phn2.svg";
-import phn3 from '../assets/svg/phone2.svg'
-import phn4 from "../assets/images/client/phn4.svg";
-import phn5 from "../assets/images/client/phn5.svg";
-import phn6 from "../assets/images/client/phn6.svg";
-import phn7 from "../assets/images/client/phn7.svg";
+import phn1 from "../assets/images/client/phn1.png";
+import phn2 from "../assets/images/client/phn2.png";
+import phn3 from "../assets/images/client/phn3.png";
+import phn4 from "../assets/images/client/phn4.png";
+import phn5 from "../assets/images/client/phn5.png";
+import phn6 from "../assets/images/client/phn6.png";
+import phn7 from "../assets/images/client/phn7.png";
 import ScrollingPhones from "./ScrollingPhones";
 import About from "./shared/About";
 

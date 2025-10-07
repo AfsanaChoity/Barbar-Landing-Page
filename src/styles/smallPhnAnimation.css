@@ -1,8 +1,8 @@
-.phone-size {  height: auto; display: block; }
+/* .phone-size {  height: auto; display: block; }
 
         /* --- Entrance animations (SLOWER now) --- */
 
-        @keyframes enterFromBottom {
+        /* @keyframes enterFromBottom {
           0%   { transform: translateY(420px)  rotate(10deg); opacity: 0; }
           55%  { transform: translateY(-36px)  rotate(-6deg); opacity: 1; }
           78%  { transform: translateY(18px)  rotate(3deg); }
@@ -16,10 +16,10 @@
           72%  { transform: translateY(-20px)  rotate(-3deg); }
           90%  { transform: translateY(10px)  rotate(2deg); }
           100% { transform: translateY(-18px)  rotate(0); } /* final: slightly up */
-        }
+        
 
         /* longer idle breathing */
-        @keyframes slowBreathFront {
+        /* @keyframes slowBreathFront {
           0%   { transform: translateY(0) ; }
           50%  { transform: translateY(-12px) ; }
           100% { transform: translateY(0) ; }
@@ -39,7 +39,7 @@
         }
 
         /* default: no animation until section gets .in-view */
-        .phone-front, .phone-back {
+        /* .phone-front, .phone-back {
           animation: none;
           will-change: transform, opacity;
           border-radius: 14px;
@@ -51,10 +51,10 @@
           transform: translateZ(0);
           image-rendering: -webkit-optimize-contrast;
           image-rendering: crisp-edges;
-        }
+        } */
 
         /* When section is visible: play entrance (back first), then long idle breathing */
-        .in-view .phone-back {
+        /* .in-view .phone-back {
           animation:
             enterFromTop 3000ms cubic-bezier(.2,.9,.25,1) 0ms both,
             slowBreathBack 10s ease-in-out 2600ms infinite;
@@ -87,9 +87,9 @@
           width: 84%;
           height: 26%;
           transform: translateX(-50%);
-          background: radial-gradient(closest-side, rgba(231,140,100,0.16), rgba(231,140,100,0.06) 40%, rgba(0,0,0,0) 70%);
+          background: radial-gradient(closest-side, rgba(231,140,100,0.16), rgba(231,140,100,0.06) 40%, rgba(0,0,0,0) 70%); */
           /* filter: blur(10px); */
-          z-index: -10;
+          /* z-index: -10;
           border-radius: 999px;
         }
 
@@ -107,4 +107,9 @@
         }
 
         @keyframes fadeSlideUp { 0% { opacity:0; transform: translateY(8px);} 100% { opacity:1; transform: translateY(0);} }
-        .reveal { animation: fadeSlideUp 700ms ease forwards; opacity: 0; }
+        .reveal { animation: fadeSlideUp 700ms ease forwards; opacity: 0; }  */ 
+
+
+
+
+        

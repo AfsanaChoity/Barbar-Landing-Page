@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import phn1 from "../assets/images/smallPhn6.svg";
-import phn2 from "../assets/images/smallPhn5.svg";
+import phn1 from "../assets/images/smallPhn6.png";
+import phn2 from "../assets/images/smallPhn5.png";
 import LeftPhones from "./shared/LeftPhones";
 
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import phn1 from "../assets/images/smallPhn17.svg";
-import phn2 from "../assets/images/smallPhn18.svg";
+import phn1 from "../assets/images/smallPhn16.png";
+import phn2 from "../assets/images/smallPhn15.png";
 import RightPhones from "./shared/RightPhones";
 
 export default function SeeTranding() {

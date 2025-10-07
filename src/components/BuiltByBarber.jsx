@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import barber from "../assets/images/barber.svg";
-import phn1 from "../assets/images/smallPhn.svg";
-import phn2 from "../assets/images/smallPhn1.svg";
+import phn1 from "../assets/images/smallPhn2.png";
+import phn2 from "../assets/images/smallPhn1.png";
 import LeftPhones from "./shared/LeftPhones";
 
 
