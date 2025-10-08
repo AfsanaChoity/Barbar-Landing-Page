@@ -91,7 +91,7 @@ export default function AboutClients() {
         </div>
 
         {/* Scrolling phones */}
-        <div className="mt-10 md:mt-30" id="scrolling-phones" ref={phonesRef}>
+        <div className="mt-20 md:mt-30" id="scrolling-phones" ref={phonesRef}>
         <ScrollingPhones items={items} text="CLIENTS"/>
         </div>
         </div>
