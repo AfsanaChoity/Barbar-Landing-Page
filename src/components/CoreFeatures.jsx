@@ -92,7 +92,7 @@ export default function CoreFeatures() {
 
                 {/* Phone mockup (center) */}
                 <div className="order-1 lg:order-2">
-                    <div className="relative mx-auto w-[220px]  md:w-[300px] xl:w-[380px]   ">
+                    <div className="relative mx-auto w-[220px]  md:w-[300px] xl:w-[350px] 2xl:w-[380px]   ">
                        <div className="border-4 border-gray-500 rounded-[38px] md:rounded-[48px] shadow shadow-black/45">
                          <div className="relative rounded-[34px] md:rounded-[44px] bg-black shadow-2xl p-2">
                             <div className="absolute left-1/2 -translate-x-1/2 top-2 w-24 h-5 bg-black rounded-b-2xl" />
