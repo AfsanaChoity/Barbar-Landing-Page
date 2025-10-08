@@ -101,7 +101,7 @@ export default function CoreFeatures() {
                                 <div className="rounded-2xl md:rounded-3xl shadow-inner overflow-hidden">
                                     <video
                                         src={logoVideo}
-                                        className="w-full h-[300px] md:h-[500px] xl:h-[700px] object-cover"
+                                        className="w-full h-[300px] md:h-[500px] xl:h-[620px] 2xl:h-[700px] object-cover"
                                         autoPlay
                                         muted
                                         loop
