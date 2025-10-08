@@ -48,7 +48,7 @@ export default function CallChat() {
                         className="reveal poppins-semibold text-3xl lg:text-[56px] 2xl:text-[96px] leading-tight mb-4"
                         style={{ animationDelay: "0.05s" }}
                     >
-                        <span className="text-[#A63F0B]">Call <span className="text-black">&</span> Chat</span> - <br />
+                        <span className="text-[#A63F0B]">Call <span className="text-black">&</span> Chat</span>-<br />
                         right in the app
                     </h2>
 

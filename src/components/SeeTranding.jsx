@@ -38,7 +38,7 @@ export default function SeeTranding() {
             className="reveal poppins-semibold text-3xl lg:text-[56px] 2xl:text-[96px] leading-tight mb-4"
             style={{ animationDelay: "0.05s" }}
           >
-            See what’s <span className="text-[#A63F0B]"> Trending</span>  - <br />
+            See what’s <span className="text-[#A63F0B]"> Trending</span>-<br />
             Today
  
           </h2>
