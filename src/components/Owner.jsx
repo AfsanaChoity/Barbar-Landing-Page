@@ -66,6 +66,7 @@ export default function Owner() {
                                 src={image}
                                 alt="OWner"
                                 className="w-[250px] h-[160px] xl:w-[472px] xl:h-[281px] rounded-[20px] object-cover"
+                                
                             />
                         </div>
 
@@ -80,7 +81,7 @@ export default function Owner() {
                                 <img
                                     src={map}
                                     alt="map"
-                                    className=" h-[200px] xl:w-[318px] xl:h-[460px] rounded-[20px] "
+                                    className=" h-[200px] xl:w-[228px] xl:h-[460px] rounded-[20px] "
                                 />
                             </div>
                         </div>
