@@ -63,7 +63,7 @@ export default function AboutBarber() {
                                 <img
                                     src={map}
                                     alt="map"
-                                    className=" h-[200px] xl:w-[238px] xl:h-[460px] rounded-[20px] "
+                                    className=" h-[200px] xl:w-[228px] xl:h-[460px] rounded-[20px] "
                                 />
                             </div>
                         </div>
