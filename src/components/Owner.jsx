@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import image from "../assets/images/owner/owner.png";
-import map from "../assets/images/owner/ownerPhn.svg";
+import map from "../assets/images/owner/ownerPhn2.png";
 import phn1 from "../assets/images/owner/phn1.png";
 import phn2 from "../assets/images/owner/phn2.png";
 import phn3 from "../assets/images/owner/phn3.png";
 import phn4 from "../assets/images/owner/phn4.png";
-import phn5 from "../assets/images/owner/phn5.svg";
 import phn6 from "../assets/images/owner/dashboard.png";
 
 import ScrollingPhones from "./ScrollingPhones";
