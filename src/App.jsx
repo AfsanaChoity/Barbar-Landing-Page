@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import logo from './assets/logo.png';
 import vector8 from './assets/svg/Vector8.svg'
 import vector9 from './assets/svg/Vector9.svg'
 import playstore from './assets/svg/playstore.svg'
 import apple from './assets/svg/apple.svg'
-// import phn1 from './assets/svg/phone1.svg'
-// import phn2 from './assets/svg/phone2.svg'
-// import phn3 from './assets/svg/phone3.svg'
 import phn1 from './assets/svg/phone1.png'
 import phn2 from './assets/svg/phone2.png'
 import phn3 from './assets/svg/phone3.png'
@@ -179,7 +176,7 @@ export default function App() {
                     align={{ offset: [0, 10] }}
 
                   >
-                    <button type="button" aria-label="Open menu" className="rounded flex items-center">
+                    <button type="button" aria-label="Open menu" className="rounded flex items-center cursor-pointer">
                       <TfiAlignJustify style={{ fontSize: 20 }} />
                     </button>
                   </Dropdown>
