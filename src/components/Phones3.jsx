@@ -30,7 +30,7 @@ export default function Phones3() {
           muted
           autoPlay
           loop
-          // playsInline
+          playsInline
           className="w-[80px] h-[160px] md:w-[210px] md:h-[420px] lg:w-[273px] lg:h-[534px] mt-5 md:mt-10 lg:mt-5 2xl:mt-0 2xl:w-[333px] 2xl:h-[674px] object-contain rounded-[16px] md:rounded-[38px] lg:rounded-[38px] xl:rounded-[58px] "
           ></video>
         </div>
@@ -43,7 +43,7 @@ export default function Phones3() {
           muted
           autoPlay
           loop
-          // playsInline
+          playsInline
           className="w-[90px] h-[180px] md:w-[240px] md:h-[476px] mt-5 md:mt-8 lg:mt-0 lg:w-[300px] lg:h-[600px] 2xl:w-[384px] 2xl:h-[778px] object-contain rounded-[14px] md:rounded-[38px] lg:rounded-[68px] "
           ></video>
         </div>
@@ -56,7 +56,7 @@ export default function Phones3() {
           muted
           autoPlay
           loop
-          // playsInline
+          playsInline
           className="w-[80px] h-[160px] md:w-[210px] md:h-[420px] lg:w-[273px] lg:h-[534px] mt-5 md:mt-10 lg:mt-5 2xl:mt-0 2xl:w-[333px] 2xl:h-[674px] object-contain rounded-[16px] md:rounded-[38px] lg:rounded-[38px] xl:rounded-[58px] "
           ></video>
         </div>
